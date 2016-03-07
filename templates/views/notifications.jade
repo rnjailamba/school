@@ -1,0 +1,35 @@
+extends ../layouts/default
+
+include ../mixins/notification
+
+block content
+	.row
+		.col-sm-8
+
+			if notifications.results.length
+				if notifications.totalPages > 1
+					.lead.text-muted Showing 
+						strong #{notifications.first}
+						|  to 
+						strong #{notifications.last}
+						|  of 
+						strong #{notifications.total}
+						|  notifications
+				else
+					.lead.text-muted Showing #{utils.plural(notifications.results.length, '* notification')}
+				.blog
+					each notification in notifications.results
+						+notification(notification)
+				if notifications.totalPages > 1
+					ul.pagination
+						if notifications.previous
+							li: a(href='?page=' + notifications.previous): span.glyphicon.glyphicon-chevron-left
+						else
+							li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+						each p, i in notifications.pages
+							li(class=notifications.currentPage === p ? 'active' : null)
+								a(href='?page=' + (p === '...' ? (i ? notifications.totalPages : 1) : p ))= p
+						if notifications.next
+							li: a(href='?page=' + notifications.next): span.glyphicon.glyphicon-chevron-right
+						else
+							li.disabled: a(href='?page=' + notifications.totalPages): span.glyphicon.glyphicon-chevron-right
