@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+include ../mixins/notification
+
+block content
+	if !notification
+		.jumbotron.text-center
+			h2 Invalid notification...
+			p.lead Please check the url and try again
+	else
+		.row
+			.col-md-8.col-md-offset-2
+				p: a(href='/notification').text-muted &larr; back to the notifications
+				hr
+				article
+					header
+						h1= notification.name
+						div
+							p.text-muted.text-small Posted 
+								if notification.publishedDate
+									| on 
+									time(datetime=notification.publishedDate)=notification._.publishedDate.format('MMMM Do, YYYY')
+								if notification.author
+									| by #{notification.author.name.full}
+						hr
+						!= notification.content.full
+					

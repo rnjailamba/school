@@ -33,7 +33,7 @@ exports = module.exports = function (app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
-	app.get('/demo', routes.views.demo);
+	app.get('/notification/:notification', routes.views.notification);
 	app.all('/contact', routes.views.contact);
 
 	// Downloads

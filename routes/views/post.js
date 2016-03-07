@@ -12,6 +12,7 @@ exports = module.exports = function (req, res) {
 	locals.filters = {
 		post: req.params.post,
 	};
+	console.log(locals);
 
 	// Load the current post
 	view.on('init', function (next) {
