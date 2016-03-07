@@ -1,4 +1,6 @@
 var keystone = require('keystone');
+var engines = require('consolidate');
+
 
 keystone.init({
 
