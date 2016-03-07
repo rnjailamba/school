@@ -28,19 +28,6 @@ exports = module.exports = function (req, res) {
 
 	});
 
-	// Load other notifications
-	view.on('init', function (next) {
-
-		var q = Notification.model.find().populate('name').limit('4');
-
-		q.exec(function (err, results) {
-			locals.notifications = results;
-			console.log(results);
-			next(err);
-		});
-
-	});
-
 	view.render('notification');
 
 }

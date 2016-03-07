@@ -10,18 +10,18 @@ block content
 	else
 		.row
 			.col-md-8.col-md-offset-2
-				p: a(href='/notification').text-muted &larr; back to the notifications
+				p: a(href='/notifications').text-muted &larr; back to the notifications
 				hr
 				article
 					header
 						h1= notification.name
 						div
+							p #{notification.content}
 							p.text-muted.text-small Posted 
 								if notification.publishedDate
 									| on 
 									time(datetime=notification.publishedDate)=notification._.publishedDate.format('MMMM Do, YYYY')
 								if notification.author
-									| by #{notification.author.name.full}
+									| by #{notification.author}
 						hr
-						!= notification.content.full
 					
