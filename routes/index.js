@@ -39,12 +39,15 @@ exports = module.exports = function (app) {
 	app.get('/notification/:notification', routes.views.notification);
 	app.get('/notifications/', routes.views.notifications);
 	app.get('/home/', routes.views.home);
+	app.get('/about/', routes.views.about);
 	app.get('/blog1/', routes.views.blog1);
 	app.get('/contact1/', routes.views.contact1);
 	app.get('/gallery1/', routes.views.gallery1);
 	app.get('/post1/:post', routes.views.post1);
-	app.get('/notification1/', routes.views.notification1);
-	app.get('/notifications1/:notification', routes.views.notifications1);
+	app.get('/notifications1/', routes.views.notifications1);
+	app.get('/notification1/:notification', routes.views.notification1);
+	app.get('/admission/:admission', routes.views.admission);
+	app.get('/admissions/', routes.views.admissions);	
 
 	// Downloads
 	app.get('/download/users', routes.download.users);

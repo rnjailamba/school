@@ -1,0 +1,238 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title SOLID - Bootstrap 3 Theme
+    // Bootstrap core CSS
+    link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
+    // Custom styles for this template
+    link(href='/styles/themes/style.css', rel='stylesheet')
+    link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
+    // Just for debugging purposes. Don't actually copy this line!
+    //if lt IE 9
+      script(src='/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    script(src='/js/lib/bootstrap/modernizr.js')
+  body
+    // Fixed navbar
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') SOLID.
+        .navbar-collapse.collapse.navbar-right
+          ul.nav.navbar-nav
+            li.active
+              a(href='home') HOME
+            li
+              a(href='about') ABOUT
+            li
+              a(href='contact1') CONTACT
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | PAGES 
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='blog1') BLOG
+                li
+                  a(href='notifications1') NOTIFICATIONS
+                li
+                  a(href='admissions') ADMISSIONS
+
+        // /.nav-collapse
+    //
+      *****************************************************************************************************************
+      BLUE WRAP
+      *****************************************************************************************************************
+    #blue
+      .container
+        .row
+          h3 About.
+        // /row
+      // /container
+    // /blue
+    //
+      *****************************************************************************************************************
+      AGENCY ABOUT
+      *****************************************************************************************************************
+    .container.mtb
+      .row
+        .col-lg-6
+          img.img-responsive(src='assets/img/agency.jpg', alt='')
+        .col-lg-6
+          h4 More About Our Agency.
+          p
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          p
+            | It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          p
+            | Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+          p
+            br
+            a.btn.btn-theme(href='contact.html') Contact Us
+    //
+      *****************************************************************************************************************
+      TEEAM MEMBERS
+      *****************************************************************************************************************
+    .container.mtb
+      .row.centered
+        h3.mb MEET OUR TEAM
+        .col-lg-3.col-md-3.col-sm-3
+          .he-wrap.tpl6
+            img(src='assets/img/team/team01.jpg', alt='')
+            .he-view
+              .bg.a0(data-animate='fadeIn')
+                h3.a1(data-animate='fadeInDown') Contact Me:
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-envelope
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-twitter
+              // he bg
+            // he view
+          // he wrap
+          h4 Mark Webber
+          h5.ctitle CEO
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .hline
+        .col-lg-3.col-md-3.col-sm-3
+          .he-wrap.tpl6
+            img(src='assets/img/team/team02.jpg', alt='')
+            .he-view
+              .bg.a0(data-animate='fadeIn')
+                h3.a1(data-animate='fadeInDown') Contact Me:
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-envelope
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-twitter
+              // he bg
+            // he view
+          // he wrap
+          h4 Paul Jameson
+          h5.ctitle LEAD DESIGNER
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .hline
+        .col-lg-3.col-md-3.col-sm-3
+          .he-wrap.tpl6
+            img(src='assets/img/team/team03.jpg', alt='')
+            .he-view
+              .bg.a0(data-animate='fadeIn')
+                h3.a1(data-animate='fadeInDown') Contact Me:
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-envelope
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-twitter
+              // he bg
+            // he view
+          // he wrap
+          h4 Laura Sommers
+          h5.ctitle LEAD DEVELOPER
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .hline
+        .col-lg-3.col-md-3.col-sm-3
+          .he-wrap.tpl6
+            img(src='assets/img/team/team04.jpg', alt='')
+            .he-view
+              .bg.a0(data-animate='fadeIn')
+                h3.a1(data-animate='fadeInDown') Contact Me:
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-envelope
+                a.dmbutton.a2(href='#', data-animate='fadeInUp')
+                  i.fa.fa-twitter
+              // he bg
+            // he view
+          // he wrap
+          h4 Martin Blunt
+          h5.ctitle MARKETING
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .hline
+    //
+      *****************************************************************************************************************
+      TESTIMONIALS
+      *****************************************************************************************************************
+    #twrap
+      .container.centered
+        .row
+          .col-lg-8.col-lg-offset-2
+            i.fa.fa-comment-o
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            h4
+              br
+              | Marcel Newman
+            p WEB DESIGNER - BLACKTIE.CO
+    //
+      *****************************************************************************************************************
+      OUR CLIENTS
+      *****************************************************************************************************************
+    #cwrap
+      .container
+        .row.centered
+          h3 OUR CLIENTS
+          .col-lg-3.col-md-3.col-sm-3
+            img.img-responsive(src='assets/img/clients/client01.png')
+          .col-lg-3.col-md-3.col-sm-3
+            img.img-responsive(src='assets/img/clients/client02.png')
+          .col-lg-3.col-md-3.col-sm-3
+            img.img-responsive(src='assets/img/clients/client03.png')
+          .col-lg-3.col-md-3.col-sm-3
+            img.img-responsive(src='assets/img/clients/client04.png')
+    //
+      *****************************************************************************************************************
+      FOOTER
+      *****************************************************************************************************************
+    #footerwrap
+      .container
+        .row
+          .col-lg-4
+            h4 About
+            .hline-w
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          .col-lg-4
+            h4 Social Links
+            .hline-w
+            p
+              a(href='#')
+                i.fa.fa-dribbble
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-instagram
+              a(href='#')
+                i.fa.fa-tumblr
+          .col-lg-4
+            h4 Our Bunker
+            .hline-w
+            p
+              | Some Ave, 987,
+              br
+              | 		 				23890, New York,
+              br
+              | 		 				United States.
+              br
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/js/lib/bootstrap/bootstrap.min.js')
+    script(src='/js/lib/bootstrap/retina-1.1.0.js')
+    script(src='/js/lib/bootstrap/jquery.hoverdir.js')
+    script(src='/js/lib/bootstrap/jquery.hoverex.min.js')
+    script(src='/js/lib/bootstrap/jquery.prettyPhoto.js')
+    script(src='/js/lib/bootstrap/jquery.isotope.min.js')
+    script(src='/js/lib/bootstrap/custom.js')
