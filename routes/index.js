@@ -34,11 +34,17 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.all('/blog/post/:post', routes.views.post);
+	app.all('/contact', routes.views.contact);	
 	app.get('/gallery', routes.views.gallery);
 	app.get('/notification/:notification', routes.views.notification);
 	app.get('/notifications/', routes.views.notifications);
 	app.get('/home/', routes.views.home);
-	app.all('/contact', routes.views.contact);
+	app.get('/blog1/', routes.views.blog1);
+	app.get('/contact1/', routes.views.contact1);
+	app.get('/gallery1/', routes.views.gallery1);
+	app.get('/post1/:post', routes.views.post1);
+	app.get('/notification1/', routes.views.notification1);
+	app.get('/notifications1/:notification', routes.views.notifications1);
 
 	// Downloads
 	app.get('/download/users', routes.download.users);
