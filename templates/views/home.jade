@@ -7,6 +7,8 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='')
     title SOLID - Bootstrap 3 Theme
+    link(href='/styles/themes/main.css', rel='stylesheet')
+    link(href='/styles/themes/prism.css', rel='stylesheet')
     // Bootstrap core CSS
     link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
     // Custom styles for this template
@@ -290,6 +292,48 @@ html(lang='en')
             a(href='single-post.html') You need this theme, buy it now.
           p
             a(href='single-post.html') This theme is what you need.
+
+     
+
+    .container.mtb
+      .row
+        .col-lg-4.col-lg-offset-1
+          h4 More About Our Agency.
+          p
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          p
+            br
+            a.btn.btn-theme(href='about.html') More Info
+        .col-lg-6
+            #nt-example1-container
+              i#nt-example1-prev.fa.fa-arrow-up
+              ul#nt-example1
+                li
+                  | Etiam imperdiet volutpat libero eu tristique. Aenean, rutrum felis in. 
+                  a(href='#') Read more...
+                li
+                  | Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna. 
+                  a(href='#') Read more...
+                li
+                  | Praesent ornare nisl lorem, ut condimentum lectus gravida ut. 
+                  a(href='#') Read more...
+                li
+                  | Nunc ultrices tortor eu massa placerat posuere. Vivamus viverra sagittis. 
+                  a(href='#') Read more...
+                li
+                  | Morbi sodales tellus sit amet leo congue bibendum. Ut non mauris eu neque. 
+                  a(href='#') Read more...
+                li
+                  | In pharetra suscipit orci sed viverra. Praesent at sollicitudin tortor, id. 
+                  a(href='#') Read more...
+                li
+                  | Maecenas nec ligula sed est suscipit aliquet sed eget ipsum, suspendisse. 
+                  a(href='#') Read more...
+                li
+                  | Onec bibendum consectetur diam, nec euismod urna venenatis eget.. 
+                  a(href='#') Read more...
+              i#nt-example1-next.fa.fa-arrow-down
+
     //
       *****************************************************************************************************************
       TESTIMONIALS
@@ -369,10 +413,21 @@ html(lang='en')
     script(src='/js/lib/bootstrap/jquery.prettyPhoto.js')
     script(src='/js/lib/bootstrap/jquery.isotope.min.js')
     script(src='/js/lib/bootstrap/custom.js')
+    script(src='/js/lib/bootstrap/chart.js')
+    script(src='/js/lib/bootstrap/prism.js')
+    script(src='/js/lib/bootstrap/jquery.mCustomScrollbar.min.js')
+    script(src='/js/lib/bootstrap/jquery.newsTicker.js')    
     script.
       // Portfolio
       (function($) {
       "use strict";
+      var nt_example1 = $('#nt-example1').newsTicker({
+      row_height: 80,
+      max_rows: 3,
+      duration: 800,
+      prevButton: $('#nt-example1-prev'),
+      nextButton: $('#nt-example1-next')
+      });
       var $container = $('.portfolio'),
       $items = $container.find('.portfolio-item'),
       portfolioLayout = 'fitRows';
