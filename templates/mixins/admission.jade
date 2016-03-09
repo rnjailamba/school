@@ -2,10 +2,6 @@ mixin admission(admission)
 	article(data-ks-editable=editable(user, { list: 'Admission', id: admission.id })).media
 		.media-left
 			a(href='/admission/' + admission.key)
-				if admission.pdf.exists
-					p pdf exists!
-				else
-					p pdf doesnt exists!
 		.media-body
 			h3.media-heading
 				a(href='/admission/' + admission.key)= admission.name

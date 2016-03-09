@@ -10,6 +10,7 @@ Admission.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'published', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
+	pdfName: { type: String, index: true,default: 'Download pdf by clicking here' },
 	pdf: { type: Types.S3File },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
@@ -22,5 +23,5 @@ Admission.schema.virtual('content.full').get(function () {
 });
 
 Admission.track = true;
-Admission.defaultColumns = 'name, state , author , publishedDate , pdf, content';
+Admission.defaultColumns = 'name, state , author , publishedDate ,pdfName, content';
 Admission.register();
