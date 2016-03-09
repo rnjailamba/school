@@ -18,7 +18,7 @@ exports = module.exports = function (req, res) {
 
 		var q = Notification.model.findOne({
 			key: locals.filters.notification,
-		}).populate('Notification categories');
+		}).populate('Notification');
 
 		q.exec(function (err, result) {
 			console.log(result);

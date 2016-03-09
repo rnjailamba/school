@@ -1,252 +1,57 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='')
-    meta(name='author', content='')
-    title SOLID - Bootstrap 3 Theme
-    // Bootstrap core CSS
-    link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
-    // Custom styles for this template
-    link(href='/styles/themes/style.css', rel='stylesheet')
-    link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
-    // Just for debugging purposes. Don't actually copy this line!
-    //if lt IE 9
-      script(src='/js/ie8-responsive-file-warning.js')
-    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
-    //if lt IE 9
-      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
-      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
-    script(src='/js/lib/bootstrap/modernizr.js')
-  body
-    // Fixed navbar
-    .navbar.navbar-default.navbar-fixed-top(role='navigation')
-      .container
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/') SOLID.
-        .navbar-collapse.collapse.navbar-right
-          ul.nav.navbar-nav
-            li.active
-              a(href='home') HOME
-            li
-              a(href='about') ABOUT
-            li
-              a(href='contact1') CONTACT
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                | PAGES 
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='blog1') BLOG
-                li
-                  a(href='notifications1') NOTIFICATIONS
-                li
-                  a(href='admissions') ADMISSIONS
+extends ../layouts/default
 
-        // /.nav-collapse
-    //
-      *****************************************************************************************************************
-      BLUE WRAP
-      *****************************************************************************************************************
-    #blue
-      .container
-        .row
-          h3 Blog List.
-        // /row
-      // /container
-    // /blue
-    //
-      *****************************************************************************************************************
-      BLOG CONTENT
-      *****************************************************************************************************************
-    .container.mtb
-      .row
-        .col-lg-8
-          p
-            img.img-responsive(src='assets/img/post01.jpg')
-          a(href='single-post.html')
-            h3.ctitle Time to change your apps.
-          p
-            csmall Posted: April 25, 2014.
-            |  
-            csmall2 By: Admin - 3 Comments
-          p
-            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          p
-            | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          p
-            a(href='single-post.html') [Read More]
-          .hline
-          .spacing
-          p
-            img.img-responsive(src='assets/img/post02.jpg')
-          a(href='single-post.html')
-            h3.ctitle Our new project is here.
-          p
-            csmall Posted: April 25, 2014.
-            |  
-            csmall2 By: Admin - 3 Comments
-          p
-            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          p
-            | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          p
-            a(href='single-post.html') [Read More]
-          .hline
-          .spacing
-          p
-            img.img-responsive(src='assets/img/post03.jpg')
-          a(href='single-post.html')
-            h3.ctitle Logo design contest starts now.
-          p
-            csmall Posted: April 25, 2014.
-            |  
-            csmall2 By: Admin - 3 Comments
-          p
-            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          p
-            | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          p
-            a(href='single-post.html') [Read More]
-          .hline
-        .col-lg-4
-          h4 Search
-          .hline
-          p
-            br
-            input.form-control(type='text', placeholder='Search something')
-          .spacing
-          h4 Categories
-          .hline
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Wordpress
-            span.badge.badge-theme.pull-right 9
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Photoshop
-            span.badge.badge-theme.pull-right 3
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Web Design
-            span.badge.badge-theme.pull-right 11
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Development
-            span.badge.badge-theme.pull-right 5
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Tips & Tricks
-            span.badge.badge-theme.pull-right 7
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Code Snippets
-            span.badge.badge-theme.pull-right 12
-          .spacing
-          h4 Recent Posts
-          .hline
-          ul.popular-posts
-            li
-              a(href='#')
-                img(src='assets/img/thumb01.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 02/21/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb02.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 03/01/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb03.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 05/16/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb04.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 05/16/14
-          .spacing
-          h4 Popular Tags
-          .hline
-          p
-            a.btn.btn-theme(href='#', role='button') Design
-            a.btn.btn-theme(href='#', role='button') Wordpress
-            a.btn.btn-theme(href='#', role='button') Flat
-            a.btn.btn-theme(href='#', role='button') Modern
-            a.btn.btn-theme(href='#', role='button') Wallpaper
-            a.btn.btn-theme(href='#', role='button') HTML5
-            a.btn.btn-theme(href='#', role='button') Pre-processor
-            a.btn.btn-theme(href='#', role='button') Developer
-            a.btn.btn-theme(href='#', role='button') Windows
-            a.btn.btn-theme(href='#', role='button') Phothosop
-            a.btn.btn-theme(href='#', role='button') UX
-            a.btn.btn-theme(href='#', role='button') Interface
-            a.btn.btn-theme(href='#', role='button') UI
-            a.btn.btn-theme(href='#', role='button') Blog
-    //
-      *****************************************************************************************************************
-      FOOTER
-      *****************************************************************************************************************
-    #footerwrap
-      .container
-        .row
-          .col-lg-4
-            h4 About
-            .hline-w
-            p
-              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-          .col-lg-4
-            h4 Social Links
-            .hline-w
-            p
-              a(href='#')
-                i.fa.fa-dribbble
-              a(href='#')
-                i.fa.fa-facebook
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
-              a(href='#')
-                i.fa.fa-tumblr
-          .col-lg-4
-            h4 Our Bunker
-            .hline-w
-            p
-              | Some Ave, 987,
-              br
-              | 		 				23890, New York,
-              br
-              | 		 				United States.
-              br
-    //
-      Bootstrap core JavaScript
-      ==================================================
-    // Placed at the end of the document so the pages load faster
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-    script(src='/js/lib/bootstrap/bootstrap.min.js')
-    script(src='/js/lib/bootstrap/retina-1.1.0.js')
-    script(src='/js/lib/bootstrap/jquery.hoverdir.js')
-    script(src='/js/lib/bootstrap/jquery.hoverex.min.js')
-    script(src='/js/lib/bootstrap/jquery.prettyPhoto.js')
-    script(src='/js/lib/bootstrap/jquery.isotope.min.js')
-    script(src='/js/lib/bootstrap/custom.js')
+include ../mixins/admission
+block content
+  .page-header
+    a(href='/keystone/admissions?new').btn.btn-default.pull-right= user ? 'Write Post' : 'Sign in to Write Post'
+  .row
+    .col-sm-8
+      if filters.category && !category
+        h3 Invalid Category.
+      else
+        if admissions.results.length
+          if admissions.totalPages > 1
+            .lead.text-muted Showing 
+              strong #{admissions.first}
+              |  to 
+              strong #{admissions.last}
+              |  of 
+              strong #{admissions.total}
+              |  admissions
+          else
+            .lead.text-muted Showing #{utils.plural(admissions.results.length, '* admission')}
+          .blog
+            each admission in admissions.results
+              +admission(admission)
+          if admissions.totalPages > 1
+            ul.pagination
+              if admissions.previous
+                li: a(href='?page=' + admissions.previous): span.glyphicon.glyphicon-chevron-left
+              else
+                li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+              each p, i in admissions.pages
+                li(class=admissions.currentPage === p ? 'active' : null)
+                  a(href='?page=' + (p === '...' ? (i ? admissions.totalPages : 1) : p ))= p
+              if admissions.next
+                li: a(href='?page=' + admissions.next): span.glyphicon.glyphicon-chevron-right
+              else
+                li.disabled: a(href='?page=' + admissions.totalPages): span.glyphicon.glyphicon-chevron-right
+        else
+          if category
+            .jumbotron.text-center
+              h3(style="margin-bottom:0;margin-top:0;") No admissions in the category #{category.name}.
+          else
+            .jumbotron.text-center
+              h3(style="margin-bottom:0;margin-top:0;") There are no admissions yet.
+    .col-sm-4
+      if categories.length
+        .lead.text-muted Categories
+        ul.nav.nav-pills.nav-stacked
+          li(class=!category ? 'active' : null)
+            a(href='/blog') All
+          each cat in categories
+            li(role="presentation" class=category && category.id === cat.id ? 'active' : null)
+              a(href='/blog/' + cat.key)
+                =cat.name
+                if cat.postCount
+                  span.badge.pull-right= cat.postCount
