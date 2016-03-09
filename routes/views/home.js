@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Init locals
-	locals.section = 'notifications';
+	locals.section = 'homePage';
 	locals.filters = {
 		category: req.params.category,
 	};
@@ -22,6 +22,7 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, results) {
 			locals.notifications = results;
+			console.log(results);
 			next(err);
 		});
 

@@ -1,3 +1,7 @@
+mixin notification(notification)
+  li        
+    a(href='/notification/' + notification.key)= notification.name
+
 doctype html
 html(lang='en')
   head
@@ -292,22 +296,27 @@ html(lang='en')
             a(href='single-post.html') You need this theme, buy it now.
           p
             a(href='single-post.html') This theme is what you need.
-
-     
+    //
+      *****************************************************************************************************************
+      MIDDLE CONTENT
+      *****************************************************************************************************************
 
     .container.mtb
       .row
         .col-lg-4.col-lg-offset-1
           h4 More About Our Agency.
-          p
-            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          p
-            br
-            a.btn.btn-theme(href='about.html') More Info
+          #nt-example1-container
+            i#nt-example1-prev.fa.fa-arrow-up
+            ul#nt-example1          
+              each notification in notifications
+                +notification(notification)
+            i#nt-example1-next.fa.fa-arrow-down
+
+
         .col-lg-6
-            #nt-example1-container
-              i#nt-example1-prev.fa.fa-arrow-up
-              ul#nt-example1
+            #nt-example4-container
+              i#nt-example4-prev.fa.fa-arrow-up
+              ul#nt-example4
                 li
                   | Etiam imperdiet volutpat libero eu tristique. Aenean, rutrum felis in. 
                   a(href='#') Read more...
@@ -332,7 +341,7 @@ html(lang='en')
                 li
                   | Onec bibendum consectetur diam, nec euismod urna venenatis eget.. 
                   a(href='#') Read more...
-              i#nt-example1-next.fa.fa-arrow-down
+              i#nt-example4-next.fa.fa-arrow-down
 
     //
       *****************************************************************************************************************
@@ -397,9 +406,9 @@ html(lang='en')
             p
               | Some Ave, 987,
               br
-              | 		 				23890, New York,
+              |             23890, New York,
               br
-              | 		 				United States.
+              |             United States.
               br
     //
       Bootstrap core JavaScript
@@ -423,12 +432,18 @@ html(lang='en')
       "use strict";
       var nt_example1 = $('#nt-example1').newsTicker({
       row_height: 80,
-      max_rows: 4,
+      max_rows: 2,
       duration: 800,
-      autostart:0,
       prevButton: $('#nt-example1-prev'),
       nextButton: $('#nt-example1-next')
       });
+      var nt_example4 = $('#nt-example4').newsTicker({
+      row_height: 80,
+      max_rows: 4,
+      duration: 800,
+      prevButton: $('#nt-example4-prev'),
+      nextButton: $('#nt-example4-next')
+      });      
       var $container = $('.portfolio'),
       $items = $container.find('.portfolio-item'),
       portfolioLayout = 'fitRows';
@@ -495,3 +510,5 @@ html(lang='en')
       setPortfolio();
       });
       })(jQuery);
+
+        
