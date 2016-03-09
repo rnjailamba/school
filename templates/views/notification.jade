@@ -16,7 +16,7 @@ block content
 					header
 						h1= notification.name
 						div
-							p #{notification.content}
+							!= notification.content
 							p.text-muted.text-small Posted 
 								if notification.publishedDate
 									| on 

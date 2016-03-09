@@ -31,6 +31,13 @@ keystone.init({
 
 });
 
+keystone.set('s3 config', { 
+	bucket: 'cementifyblogimages', 
+	key: 'AKIAJDTELPCXKB6E3LBQ', 
+	secret: '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'
+	
+});
+
 keystone.import('models');
 
 keystone.set('locals', {
@@ -43,6 +50,7 @@ keystone.set('locals', {
 	chartbeat_property: keystone.get('chartbeat property'),
 	chartbeat_domain: keystone.get('chartbeat domain')
 });
+
 
 keystone.set('routes', require('./routes'));
 
