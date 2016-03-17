@@ -33,23 +33,18 @@ html(lang='en')
           a.navbar-brand(href='/') SOLID.
         .navbar-collapse.collapse.navbar-right
           ul.nav.navbar-nav
-            li.active
-              a(href='home') HOME
             li
+              a(href='home') HOME
+            li.active
               a(href='about') ABOUT
             li
               a(href='contact1') CONTACT
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                | PAGES 
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='blog1') BLOG
-                li
-                  a(href='notifications1') NOTIFICATIONS
-                li
-                  a(href='admissions') ADMISSIONS
+            li
+              a(href='blog1') BLOG
+            li
+              a(href='notifications1') NOTIFICATIONS
+            li
+              a(href='admissions') ADMISSIONS
 
         // /.nav-collapse
     //
@@ -70,7 +65,7 @@ html(lang='en')
     .container.mtb
       .row
         .col-lg-6
-          img.img-responsive(src='assets/img/agency.jpg', alt='')
+          img.img-responsive(src='/images/agency.jpg', alt='')
         .col-lg-6
           h4 More About Our Agency.
           p
@@ -81,7 +76,7 @@ html(lang='en')
             | Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
           p
             br
-            a.btn.btn-theme(href='contact.html') Contact Us
+            a.btn.btn-theme(href='contact1') Contact Us
     //
       *****************************************************************************************************************
       TEEAM MEMBERS
@@ -91,7 +86,7 @@ html(lang='en')
         h3.mb MEET OUR TEAM
         .col-lg-3.col-md-3.col-sm-3
           .he-wrap.tpl6
-            img(src='assets/img/team/team01.jpg', alt='')
+            img(src='/images/team/team01.jpg', alt='')
             .he-view
               .bg.a0(data-animate='fadeIn')
                 h3.a1(data-animate='fadeInDown') Contact Me:
@@ -108,7 +103,7 @@ html(lang='en')
           .hline
         .col-lg-3.col-md-3.col-sm-3
           .he-wrap.tpl6
-            img(src='assets/img/team/team02.jpg', alt='')
+            img(src='/images/team/team02.jpg', alt='')
             .he-view
               .bg.a0(data-animate='fadeIn')
                 h3.a1(data-animate='fadeInDown') Contact Me:
@@ -125,7 +120,7 @@ html(lang='en')
           .hline
         .col-lg-3.col-md-3.col-sm-3
           .he-wrap.tpl6
-            img(src='assets/img/team/team03.jpg', alt='')
+            img(src='/images/team/team03.jpg', alt='')
             .he-view
               .bg.a0(data-animate='fadeIn')
                 h3.a1(data-animate='fadeInDown') Contact Me:
@@ -142,7 +137,7 @@ html(lang='en')
           .hline
         .col-lg-3.col-md-3.col-sm-3
           .he-wrap.tpl6
-            img(src='assets/img/team/team04.jpg', alt='')
+            img(src='/images/team/team04.jpg', alt='')
             .he-view
               .bg.a0(data-animate='fadeIn')
                 h3.a1(data-animate='fadeInDown') Contact Me:
@@ -157,37 +152,6 @@ html(lang='en')
           h5.ctitle MARKETING
           p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           .hline
-    //
-      *****************************************************************************************************************
-      TESTIMONIALS
-      *****************************************************************************************************************
-    #twrap
-      .container.centered
-        .row
-          .col-lg-8.col-lg-offset-2
-            i.fa.fa-comment-o
-            p
-              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            h4
-              br
-              | Marcel Newman
-            p WEB DESIGNER - BLACKTIE.CO
-    //
-      *****************************************************************************************************************
-      OUR CLIENTS
-      *****************************************************************************************************************
-    #cwrap
-      .container
-        .row.centered
-          h3 OUR CLIENTS
-          .col-lg-3.col-md-3.col-sm-3
-            img.img-responsive(src='assets/img/clients/client01.png')
-          .col-lg-3.col-md-3.col-sm-3
-            img.img-responsive(src='assets/img/clients/client02.png')
-          .col-lg-3.col-md-3.col-sm-3
-            img.img-responsive(src='assets/img/clients/client03.png')
-          .col-lg-3.col-md-3.col-sm-3
-            img.img-responsive(src='assets/img/clients/client04.png')
     //
       *****************************************************************************************************************
       FOOTER
