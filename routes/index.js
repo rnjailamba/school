@@ -7,7 +7,7 @@ keystone.pre('routes', function (req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Blog', key: 'blog', href: '/blog' },
 		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
+		{ label: 'Contact', key: 'contact1', href: '/contact1' },
 		{ label: 'Notifications', key: 'notifications', href: '/notifications' },
 		{ label: 'Admissions', key: 'admissions', href: '/admissions' },
 		{ label: 'Homepage', key: 'homepage', href: '/home' },
@@ -42,7 +42,7 @@ exports = module.exports = function (app) {
 	app.get('/home/', routes.views.home);
 	app.get('/about/', routes.views.about);
 	app.get('/blog1/', routes.views.blog1);
-	app.get('/contact1/', routes.views.contact1);
+	app.all('/contact1/', routes.views.contact1);
 	app.get('/gallery1/', routes.views.gallery1);
 	app.get('/post1/:post', routes.views.post1);
 	app.get('/notifications1/', routes.views.notifications1);
