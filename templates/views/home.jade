@@ -31,13 +31,13 @@ html(lang='en')
     .navbar.navbar-default.navbar-fixed-top#mainNav(role='navigation')
       .container
         .navbar-header
+          a.navbar-brand#theLogo(href='/') 
+            img(src='/images/logo/logo.png', alt='' , width='400', height='150')        
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') 
-            img(src='/images/logo/logo.png', alt='' , width='500', height='150')
         .navbar-collapse.collapse.navbar-right#listNav
           ul.nav.navbar-nav
             li.active
