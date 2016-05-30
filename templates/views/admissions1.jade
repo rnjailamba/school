@@ -1,0 +1,94 @@
+include ../mixins/admission1
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Tagore Public School
+    // Bootstrap core CSS
+    link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
+    // Custom styles for this template
+    link(href='/styles/themes/style.css', rel='stylesheet')
+    link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
+    // Just for debugging purposes. Don't actually copy this line!
+    //if lt IE 9
+      script(src='/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    script(src='/js/lib/bootstrap/modernizr.js')
+  body
+    // Fixed navbar
+    .navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/home') Tagore Public School
+        .navbar-collapse.collapse.navbar-right
+          ul.nav.navbar-nav
+            li
+              a(href='home') HOME
+            li
+              a(href='about') ABOUT
+            li
+              a(href='contact1') CONTACT
+            li
+              a(href='blog1') BLOG
+            li
+              a(href='notifications1') NOTIFICATIONS
+            li.active
+              a(href='admissions') ADMISSIONS
+
+        // /.nav-collapse
+    //
+      *****************************************************************************************************************
+      BLUE WRAP
+      *****************************************************************************************************************
+    #blue
+      .container
+        .row
+          h3 Admission Notice List.
+          
+          
+    .container.mtb
+      .row
+        .col-lg-8
+          if admissions.results.length
+            if admissions.totalPages > 1
+              .lead.text-muted Showing 
+                strong #{admissions.first}
+                |  to 
+                strong #{admissions.last}
+                |  of 
+                strong #{admissions.total}
+                |  admission notification
+            else
+              .lead.text-muted Showing #{utils.plural(admissions.results.length, '* admission notifications')}
+            .blog
+              each admission in admissions.results
+                +admission(admission)
+            if admissions.totalPages > 1
+              ul.pagination
+                if admissions.previous
+                  li: a(href='?page=' + admissions.previous): span.glyphicon.glyphicon-chevron-left
+                else
+                  li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+                each p, i in admissions.pages
+                  li(class=admissions.currentPage === p ? 'active' : null)
+                    a(href='?page=' + (p === '...' ? (i ? admissions.totalPages : 1) : p ))= p
+                if admissions.next
+                  li: a(href='?page=' + admissions.next): span.glyphicon.glyphicon-chevron-right
+                else
+                  li.disabled: a(href='?page=' + admissions.totalPages): span.glyphicon.glyphicon-chevron-right
+          else
+            .jumbotron.text-center
+              h3(style="margin-bottom:0;margin-top:0;") There are no admission notices yet.

@@ -1,0 +1,17 @@
+mixin admission(admission)
+  article(data-ks-editable=editable(user, { list: 'Admission', id: admission.id })).media
+    .media-left
+      a(href='/admission1/' + admission.key)
+    .media-body
+      h3.media-heading
+        a(href='/admission1/' + admission.key)= admission.name
+      if admission.publishedDate || admission.author
+        p.text-muted.text-small
+          if admission.publishedDate
+            time= admission._.publishedDate.format('MMMM Do, YYYY')
+            |  
+          if admission.author
+            span by #{admission.author.name.full}
+      != admission.content.brief
+  .hline
+  .spacing  

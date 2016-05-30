@@ -48,7 +48,9 @@ exports = module.exports = function (app) {
 	app.get('/notifications1/', routes.views.notifications1);
 	app.get('/notification1/:notification', routes.views.notification1);
 	app.get('/admission/:admission', routes.views.admission);
+	app.get('/admission1/:admission', routes.views.admission1);
 	app.get('/admissions/', routes.views.admissions);
+	app.get('/admissions1/', routes.views.admissions1);
 
 	// Downloads
 	app.get('/download/users', routes.download.users);

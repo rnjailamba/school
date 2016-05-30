@@ -33,7 +33,7 @@ keystone.init({
 
 keystone.set('s3 config', {
 	bucket: 'cementifyblogimages',
-	key: '', 
+	key: '',
 	secret: ''
 
 });
