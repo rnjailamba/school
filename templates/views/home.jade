@@ -1,5 +1,5 @@
 mixin notification(notification)
-  li        
+  li
     a(href='/notification/' + notification.key)= notification.name
 
 doctype html
@@ -10,7 +10,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title SOLID - Bootstrap 3 Theme
+    title Tagore Public School, Naraina Vihar
     link(href='/styles/themes/main.css', rel='stylesheet')
     link(href='/styles/themes/prism.css', rel='stylesheet')
     // Bootstrap core CSS
@@ -28,7 +28,7 @@ html(lang='en')
     script(src='/js/lib/bootstrap/modernizr.js')
   body
     // Fixed navbar
-    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+    .navbar.navbar-default.navbar-fixed-top#mainNav(role='navigation')
       .container
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -36,8 +36,9 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') SOLID.
-        .navbar-collapse.collapse.navbar-right
+          a.navbar-brand(href='/') 
+            img(src='/images/logo/logo.png', alt='' , width='500', height='150')
+        .navbar-collapse.collapse.navbar-right#listNav
           ul.nav.navbar-nav
             li.active
               a(href='home') HOME
@@ -302,7 +303,7 @@ html(lang='en')
           h4 More About Our Agency.
           #nt-example1-container
             i#nt-example1-prev.fa.fa-arrow-up
-            ul#nt-example1          
+            ul#nt-example1
               each notification in notifications
                 +notification(notification)
             i#nt-example1-next.fa.fa-arrow-down
@@ -313,28 +314,28 @@ html(lang='en')
               i#nt-example4-prev.fa.fa-arrow-up
               ul#nt-example4
                 li
-                  | Etiam imperdiet volutpat libero eu tristique. Aenean, rutrum felis in. 
+                  | Etiam imperdiet volutpat libero eu tristique. Aenean, rutrum felis in.
                   a(href='#') Read more...
                 li
-                  | Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna. 
+                  | Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna.
                   a(href='#') Read more...
                 li
-                  | Praesent ornare nisl lorem, ut condimentum lectus gravida ut. 
+                  | Praesent ornare nisl lorem, ut condimentum lectus gravida ut.
                   a(href='#') Read more...
                 li
-                  | Nunc ultrices tortor eu massa placerat posuere. Vivamus viverra sagittis. 
+                  | Nunc ultrices tortor eu massa placerat posuere. Vivamus viverra sagittis.
                   a(href='#') Read more...
                 li
-                  | Morbi sodales tellus sit amet leo congue bibendum. Ut non mauris eu neque. 
+                  | Morbi sodales tellus sit amet leo congue bibendum. Ut non mauris eu neque.
                   a(href='#') Read more...
                 li
-                  | In pharetra suscipit orci sed viverra. Praesent at sollicitudin tortor, id. 
+                  | In pharetra suscipit orci sed viverra. Praesent at sollicitudin tortor, id.
                   a(href='#') Read more...
                 li
-                  | Maecenas nec ligula sed est suscipit aliquet sed eget ipsum, suspendisse. 
+                  | Maecenas nec ligula sed est suscipit aliquet sed eget ipsum, suspendisse.
                   a(href='#') Read more...
                 li
-                  | Onec bibendum consectetur diam, nec euismod urna venenatis eget.. 
+                  | Onec bibendum consectetur diam, nec euismod urna venenatis eget..
                   a(href='#') Read more...
               i#nt-example4-next.fa.fa-arrow-down
 
@@ -420,7 +421,7 @@ html(lang='en')
     script(src='/js/lib/bootstrap/chart.js')
     script(src='/js/lib/bootstrap/prism.js')
     script(src='/js/lib/bootstrap/jquery.mCustomScrollbar.min.js')
-    script(src='/js/lib/bootstrap/jquery.newsTicker.js')    
+    script(src='/js/lib/bootstrap/jquery.newsTicker.js')
     script.
       // Portfolio
       (function($) {
@@ -438,7 +439,7 @@ html(lang='en')
       duration: 800,
       prevButton: $('#nt-example4-prev'),
       nextButton: $('#nt-example4-next')
-      });      
+      });
       var $container = $('.portfolio'),
       $items = $container.find('.portfolio-item'),
       portfolioLayout = 'fitRows';
@@ -505,5 +506,3 @@ html(lang='en')
       setPortfolio();
       });
       })(jQuery);
-
-        
