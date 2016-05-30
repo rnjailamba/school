@@ -7,7 +7,7 @@ var Admission = new keystone.List('Admission', {
 
 Admission.add({
 	name: { type: String, required: true },
-	state: { type: Types.Select, options: 'draft, published, archived', default: 'published', index: true },
+	state: { type: Types.Select, options: 'draft, published', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
 	pdfName: { type: String, index: true,default: 'Download pdf by clicking here' },
