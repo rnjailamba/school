@@ -5,7 +5,7 @@ mixin notification(notification)
 				
 		.media-body
 			h3.media-heading
-				a(href='/notification/' + notification.key)= notification.name
+				a(href='#')= notification.name
 			if notification.publishedDate || notification.author
 				p.text-muted.text-small
 					if notification.publishedDate
