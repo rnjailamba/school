@@ -181,7 +181,6 @@ a:focus {
 
 .mtb {
 	margin-top: 80px;
-	margin-bottom: 80px;
 }
 
 .mb {
@@ -474,4 +473,8 @@ csmall2 {
 
 #blue {
 	margin-top: 0px;
+}
+
+.navbar{
+	border-radius: 0px;
 }
