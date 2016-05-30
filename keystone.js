@@ -31,11 +31,11 @@ keystone.init({
 
 });
 
-keystone.set('s3 config', { 
-	bucket: 'cementifyblogimages', 
+keystone.set('s3 config', {
+	bucket: 'cementifyblogimages',
 	key: '', 
 	secret: ''
-	
+
 });
 
 keystone.import('models');
