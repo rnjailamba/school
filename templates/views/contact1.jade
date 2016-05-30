@@ -78,10 +78,10 @@ html(lang='en')
                         | 
                         form(method='post').form-horizontal
                             input(type='hidden', name='action', value='contact1')
-                            .form-group(class=validationErrors.name ? 'has-error' : null)
-                                label.col-sm-2.text-left.control-label Name
+                            .form-group
+                                label.col-sm-2.control-label Name
                                 .col-sm-10
-                                    input(type='text' name='name.full' value=formData['name.full'] required placeholder="First Last").form-control
+                                    input(type='text' name='fullName' value=formData.fullName placeholder='(optional)').form-control
                             .form-group(class=validationErrors.email ? 'has-error' : null)
                                 label.col-sm-2.control-label Email
                                 .col-sm-10

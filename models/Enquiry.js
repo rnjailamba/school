@@ -6,7 +6,7 @@ var Enquiry = new keystone.List('Enquiry', {
 });
 
 Enquiry.add({
-	name: { type: Types.Name, required: true },
+	fullName: { type: String },
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
@@ -19,5 +19,5 @@ Enquiry.add({
 
 Enquiry.track = true;
 Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
+Enquiry.defaultColumns = ' email, enquiryType, createdAt';
 Enquiry.register();
