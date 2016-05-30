@@ -23,7 +23,7 @@ mixin post(post)
         .col-lg-8
           //- p
           //-   img.img-responsive(src='/images/post01.jpg')
-          a(href='/blog/post/' + post.key)
+          a(href='/blog1/post1/' + post.key)
             if post.image.exists
                 img(src=post._.image.fit(750,400)).img-responsive
                 //- img.img-responsive(src='/images/post01.jpg')
@@ -38,14 +38,14 @@ mixin post(post)
 
     article(data-ks-editable=editable(user, { list: 'Post', id: post.id })).media
         .media-left
-            a(href='/blog/post/' + post.key)
+            a(href='/blog1/post1/' + post.key)
                 if post.image.exists
                     img(src=post._.image.fit(80,80)).media-object
                 else
                     img(src="http://placehold.it/80x80").media-object
         .media-body
             h3.media-heading
-                a(href='/blog/post/' + post.key)= post.name
+                a(href='/blog1/post1/' + post.key)= post.name
             if post.publishedDate || post.author
                 p.text-muted.text-small
                     if post.publishedDate
@@ -55,6 +55,6 @@ mixin post(post)
                         span by #{post.author.name.full}
             != post.content.brief  
             p
-              a(href='single-post.html') [Read More]            
+              a(href='/blog1/post1/' + post.key) [Read More]            
     .hline
     .spacing         

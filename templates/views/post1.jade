@@ -1,3 +1,5 @@
+include ../mixins/post
+
 doctype html
 html(lang='en')
   head
@@ -6,7 +8,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title SOLID - Bootstrap 3 Theme
+    title Tagore Public School
     // Bootstrap core CSS
     link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
     // Custom styles for this template
@@ -22,7 +24,7 @@ html(lang='en')
     script(src='/js/lib/bootstrap/modernizr.js')
   body
     // Fixed navbar
-    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+    .navbar.navbar-default(role='navigation')
       .container
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -30,170 +32,59 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') SOLID.
+          a.navbar-brand(href='/home') Tagore Public School
         .navbar-collapse.collapse.navbar-right
           ul.nav.navbar-nav
-            li.active
+            li
               a(href='home') HOME
             li
               a(href='about') ABOUT
             li
               a(href='contact1') CONTACT
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                | PAGES 
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='blog1') BLOG
-                li
-                  a(href='notifications1') NOTIFICATIONS
-                li
-                  a(href='admissions') ADMISSIONS
+            li.active
+              a(href='blog1') BLOG
+            li
+              a(href='notifications1') NOTIFICATIONS
+            li
+              a(href='admissions') ADMISSIONS
 
-        // /.nav-collapse
-    //
-      *****************************************************************************************************************
-      BLUE WRAP
-      *****************************************************************************************************************
-    #blue
-      .container
-        .row
-          h3 Single Post.
-        // /row
-      // /container
-    // /blue
-    //
-      *****************************************************************************************************************
-      BLOG CONTENT
-      *****************************************************************************************************************
     .container.mtb
       .row
         .col-lg-8
-          p
-            img.img-responsive(src='assets/img/post01.jpg')
-          a(href='single-post.html')
-            h3.ctitle Time to change your apps.
-          p
-            csmall Posted: April 25, 2014.
-            |  
-            csmall2 By: Admin - 3 Comments
-          p
-            b Lorem Ipsum
-            |  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          p
-            | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          p
-            | Contrary to popular belief, 
-            b Lorem Ipsum is not simply random text
-            | . It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
-            a(href='#') Hampden-Sydney College
-            |  in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-          p
-            | Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          h4 Why do we use it?
-          p
-            | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-          blockquote
-            | Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-          p
-            | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          .spacing
-          h6 SHARE:
-          p.share
-            a(href='#')
-              i.fa.fa-twitter
-            a(href='#')
-              i.fa.fa-facebook
-            a(href='#')
-              i.fa.fa-tumblr
-            a(href='#')
-              i.fa.fa-google-plus
-        .col-lg-4
-          h4 Search
-          .hline
-          p
-            br
-            input.form-control(type='text', placeholder='Search something')
-          .spacing
-          h4 Categories
-          .hline
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Wordpress
-            span.badge.badge-theme.pull-right 9
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Photoshop
-            span.badge.badge-theme.pull-right 3
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Web Design
-            span.badge.badge-theme.pull-right 11
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Development
-            span.badge.badge-theme.pull-right 5
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Tips & Tricks
-            span.badge.badge-theme.pull-right 7
-          p
-            a(href='#')
-              i.fa.fa-angle-right
-              |  Code Snippets
-            span.badge.badge-theme.pull-right 12
-          .spacing
-          h4 Recent Posts
-          .hline
-          ul.popular-posts
-            li
-              a(href='#')
-                img(src='assets/img/thumb01.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 02/21/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb02.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 03/01/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb03.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 05/16/14
-            li
-              a(href='#')
-                img(src='assets/img/thumb04.jpg', alt='Popular Post')
-              p
-                a(href='#') Lorem ipsum dolor sit amet consectetur adipiscing elit
-              em Posted on 05/16/14
-          .spacing
-          h4 Popular Tags
-          .hline
-          p
-            a.btn.btn-theme(href='#', role='button') Design
-            a.btn.btn-theme(href='#', role='button') Wordpress
-            a.btn.btn-theme(href='#', role='button') Flat
-            a.btn.btn-theme(href='#', role='button') Modern
-            a.btn.btn-theme(href='#', role='button') Wallpaper
-            a.btn.btn-theme(href='#', role='button') HTML5
-            a.btn.btn-theme(href='#', role='button') Pre-processor
-            a.btn.btn-theme(href='#', role='button') Developer
-            a.btn.btn-theme(href='#', role='button') Windows
-            a.btn.btn-theme(href='#', role='button') Phothosop
-            a.btn.btn-theme(href='#', role='button') UX
-            a.btn.btn-theme(href='#', role='button') Interface
-            a.btn.btn-theme(href='#', role='button') UI
-            a.btn.btn-theme(href='#', role='button') Blog
+          if !post
+              .jumbotron.text-center
+                  h2 Invalid post...
+                  p.lead Please check the url and try again
+          else
+              .row
+                  .col-md-8.col-md-offset-2
+                      p: a(href='/blog1').text-muted &larr; back to the blog
+                      hr
+                      article
+                          header
+                              h1(style="")= post.name
+                              if post.image.exists
+                                  div(style="margin-bottom: 20px; margin-top: 20px;")
+                                      img(src=post._.image.fit(750,500)).img-responsive
+                              div
+                                  p.text-muted.text-small Posted 
+                                      if post.publishedDate
+                                          | on 
+                                          time(datetime=post.publishedDate)=post._.publishedDate.format('MMMM Do, YYYY')
+                                      if post.categories && post.categories.length
+                                          |  in 
+                                          each cat, cat_i in post.categories
+                                              a(href='/blog/' + cat.key)= cat.name
+                                              if cat_i < post.categories.length - 1
+                                                  | , 
+                                              else
+                                                  |  
+                                      if post.author
+                                          | by #{post.author.name.full}
+                              hr
+                              != post.content.full
+                              .hline
+                              .spacing    
     //
       *****************************************************************************************************************
       FOOTER
