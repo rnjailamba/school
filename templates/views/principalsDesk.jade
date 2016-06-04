@@ -1,5 +1,3 @@
-include ../mixins/notification
-
 doctype html
 html(lang='en')
   head
@@ -24,7 +22,6 @@ html(lang='en')
     script(src='/js/lib/bootstrap/modernizr.js')
   body
     // Fixed navbar
-    // Fixed navbar
     .navbar.navbar-default(role='navigation')
       .container
         .navbar-header
@@ -33,10 +30,10 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') Tagore Public School
+          a.navbar-brand(href='/') Tagore Public School 
         .navbar-collapse.collapse.navbar-right
           ul.nav.navbar-nav
-            li
+            li.active
               a(href='/') HOME
             li
               a(href='/about') ABOUT
@@ -44,7 +41,7 @@ html(lang='en')
               a(href='/contact1') CONTACT
             //- li
             //-   a(href='/blog1') BLOG
-            li.active
+            li
               a(href='/notifications1') NOTIFICATIONS
             li
               a(href='/admissions1') ADMISSIONS
@@ -57,40 +54,61 @@ html(lang='en')
     #blue
       .container
         .row
-          h3 Single Notification.
+          h3 From The Principals Desk
         // /row
       // /container
     // /blue
     //
       *****************************************************************************************************************
-      BLOG CONTENT
+      AGENCY ABOUT
       *****************************************************************************************************************
-    block content
-      if !notification
-        .jumbotron.text-center
-          h2 Invalid notification...
-          p.lead Please check the url and try again
-      else
-        .row
-          .col-md-8.col-md-offset-2
-            p: a(href='/').text-muted &larr; back to the home page
-            hr
-            article
-              header
-                h1= notification.name
-                div
-                  != notification.content
-                  p.text-muted.text-small Posted 
-                    if notification.publishedDate
-                      | on 
-                      time(datetime=notification.publishedDate)=notification._.publishedDate.format('MMMM Do, YYYY')
-                    if notification.author
-                      | by #{notification.author}
-                hr     
-            p: a(href='/notifications1').text-muted view all notifications &rarr;
-                
-            .spacing    
-            .spacing    
+    .container.mtb
+      .row
+        .col-lg-4
+          img.img-responsive(src='/images/agency.jpg', alt='')
+        .col-lg-8
+          //- h4 More About Our Agency.
+          p
+            | ''Purity of an Angel, beauty of a Blossom...
+          p
+            | A child is a blessing showered upon us from heaven''
+          p
+            | It is indeed a matter of great pride and privilege to be bestowed with the noble task of guiding the young minds to realize their true potential.
+          p
+            | I am proud to be the principal of Tagore Public School, an institution which has always provided us with the innumerable opportunities and platforms to freely extract and exhibit our innate talent. As is said by Rabindranath Tagore "The best function of education is to enable us to realize that, to live as a man is great; requiring profound philosophy for his ideal, Poetry for his expression and heroism for his conduct." I firmly believe that SCHOOL is a place in which all children grow not just in size and knowledge, but also in curiosity, courage, confidence, independence, resourcefulness, resilience, patience, competence and understanding.
+          p
+            | The child's mind is fresh and untapped but ready to explore, adapt and absorb the greatest lesson of mankind "The Art of Being Himself". He is all set to put forward his share of individuality and knowledge in the ever expanding world.
+
+          p
+            | We, at school and through education help them channelize their hyper energies in the right direction, without suppressing their creativity and freedom of expression.
+
+          p
+            | For me education is all about facilitating and guiding children to Extract - the latent talent, Educate - with a purpose, Enhance- the life time skills and evolve a harmonious personality over the years. I have learnt in the web of life it is of utmost importance to strive for the best but learn to be happy and contented with what we have.
+
+          p
+            | "What is life so full of care if there is no time to stand and stare"
+
+          p
+            | I believe in teaching my students and staff to be smart enough to avail all opportunities to progress, but never be unhappy with what we possess. Infact, in our struggle to attain the best, we forget to enjoy the present of what we have.
+
+          p
+            | Education is the stepping stone to happiness and peace of mind, which enables us to live a true life. It can be meaningful and rewarding only if the pupils are well equipped to find the answers to their questions and to be able to adjust in all possible situations.
+
+          p
+            | Today's generation of students has an unparallel knowledge base, a vibrant dynamism, an acute consciousness of the world around them, and an inevitable desire to excel beyond seam. My aim along with my team of dedicated staff is to enable each pupil to find the best within him/her and to be able to accept and invent all that is lacking and also have the moral virtues, without which a person can never be a real human being.
+
+          p
+            | One gentle push & pat from us in the right direction is all that is needed to open up the minds.
+          p
+            | Mrs. Ritu Bhatia 
+          p
+            | Principal
+
+
+          .spacingMore
+
+
+
     //
       *****************************************************************************************************************
       FOOTER

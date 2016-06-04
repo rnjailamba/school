@@ -41,6 +41,7 @@ exports = module.exports = function (app) {
 	app.get('/notifications/', routes.views.notifications);
 	app.get('/home/', routes.views.index);
 	app.get('/about/', routes.views.about);
+	app.get('/principalsDesk/', routes.views.principalsDesk);
 	app.get('/blog1/', routes.views.blog1);
 	app.all('/contact1/', routes.views.contact1);
 	app.get('/gallery1/', routes.views.gallery1);

@@ -398,6 +398,11 @@ csmall2 {
 	margin-bottom: 40px;
 }
 
+.spacingMore {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
 .badge-theme {
 	background: #00b3fe;
 }
