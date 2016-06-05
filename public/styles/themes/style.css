@@ -387,8 +387,8 @@ a:focus {
 	padding-bottom: 25px;
 }
 
-#gray h3 {
-	color: white;
+#gray h3,h4,h5 {
+	/*color: white;*/
 	margin-left: 15px;
 }
 
