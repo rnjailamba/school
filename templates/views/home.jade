@@ -16,8 +16,11 @@ html(lang='en')
     // Bootstrap core CSS
     link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
     // Custom styles for this template
-    link(href='/styles/themes/style.css', rel='stylesheet')
     link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/styles/themes/slick-carousel/slick/slick.css', rel='stylesheet')
+    link(href='/styles/themes/slick-carousel/slick/slick-theme.css', rel='stylesheet')
+    link(href='/styles/themes/style.css', rel='stylesheet')
+
     // Just for debugging purposes. Don't actually copy this line!
     //if lt IE 9
       script(src='/js/ie8-responsive-file-warning.js')
@@ -52,7 +55,6 @@ html(lang='en')
               a(href='/notifications1') NOTIFICATIONS
             li
               a(href='/admissions1') ADMISSIONS
-
     
 
     //
@@ -60,6 +62,22 @@ html(lang='en')
       HEADERWRAP
       *****************************************************************************************************************
     .container
+
+      .row
+        section.slider
+          div(data-thumb='http://placehold.it/350x150')
+            img(src='http://placehold.it/350x150')
+          div(data-thumb='http://cdn.bulbagarden.net/upload/b/bb/004MS.png')
+            img(src='http://cdn.bulbagarden.net/upload/e/e9/Spr_3f_004.png')
+          div(data-thumb='http://cdn.bulbagarden.net/upload/9/92/007MS.png')
+            img(src='http://cdn.bulbagarden.net/upload/f/f8/Spr_3f_007.png')
+          div(data-thumb='http://cdn.bulbagarden.net/upload/0/0f/025MS.png')
+            img(src='http://cdn.bulbagarden.net/upload/5/5b/Spr_3f_025.png')
+          div(data-thumb='http://cdn.bulbagarden.net/upload/d/de/133MS.png')
+            img(src='http://cdn.bulbagarden.net/upload/a/a9/Spr_3f_133.png')
+          div(data-thumb='http://cdn.bulbagarden.net/upload/a/a7/151MS.png')
+            img(src='http://cdn.bulbagarden.net/upload/3/33/Spr_3f_151.png')
+  
       .row
         .col-lg-4.col-lg-offset-1#gray
           h1 From the Principal's Desk
@@ -431,7 +449,7 @@ html(lang='en')
       Bootstrap core JavaScript
       ==================================================
     // Placed at the end of the document so the pages load faster
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js')
     script(src='/js/lib/bootstrap/bootstrap.min.js')
     script(src='/js/lib/bootstrap/retina-1.1.0.js')
     script(src='/js/lib/bootstrap/jquery.hoverdir.js')
@@ -443,10 +461,31 @@ html(lang='en')
     script(src='/js/lib/bootstrap/prism.js')
     script(src='/js/lib/bootstrap/jquery.mCustomScrollbar.min.js')
     script(src='/js/lib/bootstrap/jquery.newsTicker.js')
+    script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js')
+
     script.
       // Portfolio
       (function($) {
       "use strict";
+      $(".slider").slick({
+
+          autoplay: true,
+          dots: true,
+          adaptiveHeight: true,
+
+
+          responsive: [{ 
+              breakpoint: 500,
+              settings: {
+                  dots: false,
+                  arrows: false,
+                  infinite: false,
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+              } 
+          }]
+      });
+
       var nt_example1 = $('#nt-example1').newsTicker({
       row_height: 80,
       max_rows: 2,

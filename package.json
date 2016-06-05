@@ -11,7 +11,8 @@
     "consolidate": "^0.14.0",
     "csv": "^0.4.6",
     "keystone": "https://github.com/keystonejs/keystone.git",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "slick-carousel": "^1.6.0"
   },
   "scripts": {
     "start": "node keystone.js"
