@@ -107,16 +107,16 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
+	color: #384452	;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #00b3fe;
+	color: #384452;
 	background-color: transparent;
 }
 
 .navbar-default {
-	background-color: #384452;
+	background-color: #F4831E;
 	border-color: transparent;
 }
 
@@ -366,7 +366,7 @@ a:focus {
 /* General Tweaks */
 
 #blue {
-	background: #00b3fe;
+	background: #ecf0f1;
 	margin-top: 60px;
 	margin-bottom: 60px;
 	padding-top: 25px;
@@ -374,7 +374,7 @@ a:focus {
 }
 
 #blue h3 {
-	color: white;
+	/*color: white;*/
 	margin-left: 15px;
 }
 
@@ -487,7 +487,7 @@ csmall2 {
 #mainNav{
 	height: 125px;
 	/*background-image: url(../../images/logo/bar.png)*/
-	background-color: orange;
+	background-color: #F4831E;
 }
 
 #listNav{
