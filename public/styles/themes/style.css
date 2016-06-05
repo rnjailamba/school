@@ -378,6 +378,22 @@ a:focus {
 	margin-left: 15px;
 }
 
+
+#gray {
+	background: #ecf0f1;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#gray h3 {
+	color: white;
+	margin-left: 15px;
+}
+
+
+
 .ctitle {
 	color: #00b3fe;
 	font-weight: 700;
