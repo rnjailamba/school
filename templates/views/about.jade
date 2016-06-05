@@ -220,27 +220,14 @@ html(lang='en')
     #footerwrap
       .container
         .row
+          .col-lg-8
+            div(style='width:600px;max-width:100%;overflow:hidden;height:200px;color:red;')
+              #my-map-display(style='height:100%; width:100%;max-width:100%;')
+                iframe(style='height:100%;width:100%;border:0;', frameborder='0', src='https://www.google.com/maps/embed/v1/place?q=Tagore+Public+School,+Naraina,+New+Delhi,+Delhi,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU')
+              style.
+                #my-map-display img{max-width:none!important;background:none!important;}            
           .col-lg-4
-            h4 About
-            .hline-w
-            p
-              | Tagore Public School, Naraina Vihar is the name of this school.
-          .col-lg-4
-            h4 Social Links
-            .hline-w
-            p
-              a(href='#')
-                i.fa.fa-dribbble
-              a(href='#')
-                i.fa.fa-facebook
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
-              a(href='#')
-                i.fa.fa-tumblr
-          .col-lg-4
-            h4 Our Address
+            h4 Address And Contact Details
             .hline-w
             p
               | Tagore Public School , Naraina Vihar
@@ -251,6 +238,12 @@ html(lang='en')
               br
               | New Delhi - 110028
               br
+              | Email : 
+              a(href='mailto:ashvinbhatia@tpsnarainavihar.com') ashvinbhatia@tpsnarainavihar.com
+              br
+              |                       Phone : 
+              a(href='tel:25892157') 25892157 ,
+              a(href='tel:25894234') 25894234  
     //
       Bootstrap core JavaScript
       ==================================================
