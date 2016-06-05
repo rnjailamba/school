@@ -11,6 +11,7 @@ html(lang='en')
     link(href="/styles/themes/" + currentTheme + ".min.css", rel="stylesheet")
     // Custom styles for this template
     link(href='/styles/themes/style.css', rel='stylesheet')
+    link(href='/styles/themes/table.css', rel='stylesheet')
     link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy this line!
     //if lt IE 9
@@ -70,7 +71,7 @@ html(lang='en')
           //- h4 More About Our Agency.
           p
             | The foundation of Tagore Public School was laid in 1981. Since then the school has made tremendous progress. Today it stands complete in itself. It has been recognized by the Directorate of Education, Delhi Administration, upto senior secondary level. The school is affiliated to Central Board of Secondary Education (Affiliation No. 2730225) since 1993.
-          p
+          b
             | "ENLIGHTEN THROUGH KNOWLEDGE" is the motto of the school
           p
             | All round development of the child's personality is the main aim of this institution. Individual attention is given, special emphasis and efforts are made to make the child foster habits of responsibility and self discipline and promote initiative to imbibe human values, secular and modern outlook and a sense of belonging to the whole world.
@@ -86,77 +87,132 @@ html(lang='en')
       *****************************************************************************************************************
       TEEAM MEMBERS
       *****************************************************************************************************************
+    //- .container.mtb
+    //-   .row.centered
+    //-     h3.mb MEET OUR TEAM
+    //-     .col-lg-3.col-md-3.col-sm-3
+    //-       .he-wrap.tpl6
+    //-         img(src='/images/team/team01.jpg', alt='')
+    //-         .he-view
+    //-           .bg.a0(data-animate='fadeIn')
+    //-             h3.a1(data-animate='fadeInDown') Contact Me:
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-envelope
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-twitter
+    //-           // he bg
+    //-         // he view
+    //-       // he wrap
+    //-       h4 Mark Webber
+    //-       h5.ctitle CEO
+    //-       p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //-       .hline
+    //-     .col-lg-3.col-md-3.col-sm-3
+    //-       .he-wrap.tpl6
+    //-         img(src='/images/team/team02.jpg', alt='')
+    //-         .he-view
+    //-           .bg.a0(data-animate='fadeIn')
+    //-             h3.a1(data-animate='fadeInDown') Contact Me:
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-envelope
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-twitter
+    //-           // he bg
+    //-         // he view
+    //-       // he wrap
+    //-       h4 Paul Jameson
+    //-       h5.ctitle LEAD DESIGNER
+    //-       p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //-       .hline
+    //-     .col-lg-3.col-md-3.col-sm-3
+    //-       .he-wrap.tpl6
+    //-         img(src='/images/team/team03.jpg', alt='')
+    //-         .he-view
+    //-           .bg.a0(data-animate='fadeIn')
+    //-             h3.a1(data-animate='fadeInDown') Contact Me:
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-envelope
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-twitter
+    //-           // he bg
+    //-         // he view
+    //-       // he wrap
+    //-       h4 Laura Sommers
+    //-       h5.ctitle LEAD DEVELOPER
+    //-       p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //-       .hline
+    //-     .col-lg-3.col-md-3.col-sm-3
+    //-       .he-wrap.tpl6
+    //-         img(src='/images/team/team04.jpg', alt='')
+    //-         .he-view
+    //-           .bg.a0(data-animate='fadeIn')
+    //-             h3.a1(data-animate='fadeInDown') Contact Me:
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-envelope
+    //-             a.dmbutton.a2(href='#', data-animate='fadeInUp')
+    //-               i.fa.fa-twitter
+    //-           // he bg
+    //-         // he view
+    //-       // he wrap
+    //-       h4 Martin Blunt
+    //-       h5.ctitle MARKETING
+    //-       p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //-       .hline
+    
     .container.mtb
       .row.centered
-        h3.mb MEET OUR TEAM
-        .col-lg-3.col-md-3.col-sm-3
-          .he-wrap.tpl6
-            img(src='/images/team/team01.jpg', alt='')
-            .he-view
-              .bg.a0(data-animate='fadeIn')
-                h3.a1(data-animate='fadeInDown') Contact Me:
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-envelope
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-twitter
-              // he bg
-            // he view
-          // he wrap
-          h4 Mark Webber
-          h5.ctitle CEO
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          .hline
-        .col-lg-3.col-md-3.col-sm-3
-          .he-wrap.tpl6
-            img(src='/images/team/team02.jpg', alt='')
-            .he-view
-              .bg.a0(data-animate='fadeIn')
-                h3.a1(data-animate='fadeInDown') Contact Me:
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-envelope
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-twitter
-              // he bg
-            // he view
-          // he wrap
-          h4 Paul Jameson
-          h5.ctitle LEAD DESIGNER
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          .hline
-        .col-lg-3.col-md-3.col-sm-3
-          .he-wrap.tpl6
-            img(src='/images/team/team03.jpg', alt='')
-            .he-view
-              .bg.a0(data-animate='fadeIn')
-                h3.a1(data-animate='fadeInDown') Contact Me:
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-envelope
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-twitter
-              // he bg
-            // he view
-          // he wrap
-          h4 Laura Sommers
-          h5.ctitle LEAD DEVELOPER
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          .hline
-        .col-lg-3.col-md-3.col-sm-3
-          .he-wrap.tpl6
-            img(src='/images/team/team04.jpg', alt='')
-            .he-view
-              .bg.a0(data-animate='fadeIn')
-                h3.a1(data-animate='fadeInDown') Contact Me:
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-envelope
-                a.dmbutton.a2(href='#', data-animate='fadeInUp')
-                  i.fa.fa-twitter
-              // he bg
-            // he view
-          // he wrap
-          h4 Martin Blunt
-          h5.ctitle MARKETING
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          .hline
+        h3.mb Members of School Managing Committee
+        .spacing
+          .theTable
+            table.bordered
+              thead
+                tr
+                  th S.No.
+                  th Name
+                  th Designation
+              tr
+                td 1
+                td Mrs. Ritu Bhatia
+                td Principal
+              tr
+                td 2
+                td Vikas Bhatia
+                td Admin
+              tr
+                td 3
+                td Ashvin Bhatia
+                td Operational Manager
+              tr
+                td 4
+                td The Good, the Bad and the Ugly
+                td 1966
+              tr
+                td 5
+                td Pulp Fiction
+                td 1994
+              tr
+                td 6
+                td 12 Angry Men
+                td 1957
+              tr
+                td 7
+                td Schindler's List
+                td 1993
+              tr
+                td 8
+                td One Flew Over the Cuckoo's Nest
+                td 1975
+              tr
+                td 9
+                td The Dark Knight
+                td 2008
+              tr
+                td 10
+                td The Lord of the Rings: The Return of the King
+                td 2003
+            br
+            br    
+    
     //
       *****************************************************************************************************************
       FOOTER
