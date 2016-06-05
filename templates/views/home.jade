@@ -462,24 +462,27 @@ html(lang='en')
       // Portfolio
       (function($) {
       "use strict";
-      $(".slider").slick({
+      $(document).ready(function(){
+        $(".slider").slick({
 
-          autoplay: true,
-          dots: true,
-          adaptiveHeight: true,
+            autoplay: true,
+            dots: true,
+            adaptiveHeight: true,
 
 
-          responsive: [{ 
-              breakpoint: 500,
-              settings: {
-                  dots: false,
-                  arrows: false,
-                  infinite: false,
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-              } 
-          }]
+            responsive: [{ 
+                breakpoint: 500,
+                settings: {
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                } 
+            }]
+        });
       });
+
 
       var nt_example1 = $('#nt-example1').newsTicker({
       row_height: 80,
