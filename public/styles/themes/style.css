@@ -486,6 +486,8 @@ csmall2 {
 
 #mainNav{
 	height: 125px;
+	/*background-image: url(../../images/logo/bar.png)*/
+	background-color: orange;
 }
 
 #listNav{
@@ -503,3 +505,4 @@ csmall2 {
 .navbar{
 	border-radius: 0px;
 }
+
