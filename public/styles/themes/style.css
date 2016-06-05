@@ -522,6 +522,8 @@ csmall2 {
 }
 .slick-slide img {
   display: inline-block;
+  height: 300px;
+  width: 600px;
 }
 
 .slick-prev:before,
