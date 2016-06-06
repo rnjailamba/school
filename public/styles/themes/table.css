@@ -11,6 +11,11 @@
 	width: 50%;
 }
 
+.theEqualWidthTable4 td{
+	width: 25%;
+}
+
+
 
 table {
 
@@ -92,4 +97,8 @@ table {
     -moz-border-radius: 0 0 6px 0;
     -webkit-border-radius: 0 0 6px 0;
     border-radius: 0 0 6px 0;
+}
+
+.bordered .fullWidth td{
+	border-top:none;
 }
