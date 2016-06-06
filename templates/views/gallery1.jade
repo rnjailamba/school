@@ -12,6 +12,8 @@ html(lang='en')
     // Custom styles for this template
     link(href='/styles/themes/style.css', rel='stylesheet')
     link(href='/styles/themes/fa/css/font-awesome.min.css', rel='stylesheet')
+    link(rel="stylesheet", href="/js/lib/fancybox/jquery.fancybox.css")
+    
     // Just for debugging purposes. Don't actually copy this line!
     //if lt IE 9
       script(src='/js/ie8-responsive-file-warning.js')
@@ -22,34 +24,31 @@ html(lang='en')
     script(src='/js/lib/bootstrap/modernizr.js')
   body
     // Fixed navbar
-    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+    // Fixed navbar
+    .navbar.navbar-default#mainNav(role='navigation')
       .container
         .navbar-header
+          a.navbar-brand#theLogo(href='/') 
+            img(src='/images/logo/logo.png', alt='' , width='400', height='150')        
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') SOLID.
-        .navbar-collapse.collapse.navbar-right
+        .navbar-collapse.collapse.navbar-right#listNav
           ul.nav.navbar-nav
             li.active
-              a(href='home') HOME
+              a(href='/') HOME
             li
-              a(href='about') ABOUT
+              a(href='/about') ABOUT
             li
-              a(href='contact1') CONTACT
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                | PAGES 
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='blog1') BLOG
-                li
-                  a(href='notifications1') NOTIFICATIONS
-                li
-                  a(href='admissions') ADMISSIONS
+              a(href='/contact1') CONTACT
+            li
+              a(href='/academic') ACADEMIC
+            li
+              a(href='/notifications1') NOTIFICATIONS
+            li
+              a(href='/admissions1') ADMISSIONS
 
         // /.nav-collapse
     //
@@ -59,311 +58,175 @@ html(lang='en')
     #blue
       .container
         .row
-          h3 Portfolio.
-        // /row
-      // /container
-    // /blue
-    //
-      *****************************************************************************************************************
-      TITLE & CONTENT
-      *****************************************************************************************************************
-    .container.mtb
+          h3 Images
+    .container.mtb      
       .row
-        .col-lg-8.col-lg-offset-2.centered
-          h2
-            | We create awesome designs to standout your site or product. Check some of our latest works.
-          br
-          .hline
+        .col-lg-10.col-lg-offset-1
+          
+          
+          if galleries.length
+            each gallery, i in galleries
+              h3
+                | #{gallery.name} 
+                small.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+              
+              .row
+                each image, i in gallery.images
+                  .col-xs-4.col-sm-3.col-md-2(style="margin-bottom: 30px;")
+                    a(href=image.limit(900,600), title=gallery.name + ' image ' + (i+1), rel=gallery.key).gallery-image
+                      img(src=image.fill(300,300), alt=gallery.name + ' image ' + (i+1)).img-thumbnail
+            
+          else
+            .jumbotron.text-center
+              h3(style="margin-bottom:0;margin-top:0;") There are no albums yet.
+
+          
+
     //
       *****************************************************************************************************************
       PORTFOLIO SECTION
       *****************************************************************************************************************
-    #portfoliowrap
-      .portfolio-centered
-        .recentitems.portfolio
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_09.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_09.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.web-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_02.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Web Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_02.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_03.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_03.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_04.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_04.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_05.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_05.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_06.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_06.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_07.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_07.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_08.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_08.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.web-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_01.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Web Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_01.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_10.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_10.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_09.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_09.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.web-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_02.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Web Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_02.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_03.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_03.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_04.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_04.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_05.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_05.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_06.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_06.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_07.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_07.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.graphic-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_08.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Graphic Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_08.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.web-design
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_01.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Web Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_01.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-          .portfolio-item.books
-            .he-wrap.tpl6
-              img(src='assets/img/portfolio/portfolio_10.jpg', alt='')
-              .he-view
-                .bg.a0(data-animate='fadeIn')
-                  h3.a1(data-animate='fadeInDown') A Book Design Item
-                  a.dmbutton.a2(data-rel='prettyPhoto', href='assets/img/portfolio/portfolio_10.jpg', data-animate='fadeInUp')
-                    i.fa.fa-search
-                  a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
-                    i.fa.fa-link
-                // he bg
-              // he view
-            // he wrap
-          // end col-12
-        // portfolio
-      // portfolio container
-    // /Portfoliowrap
+    //- #portfoliowrap
+    //-   h3 LATEST SCHOOL PHOTOS
+    //-   .portfolio-centered
+    //-     .recentitems.portfolio
+    //-       .portfolio-item.graphic-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_09.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Graphic Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_09.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.web-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_02.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Web Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_02.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.graphic-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_03.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Graphic Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_03.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.graphic-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_04.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Graphic Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_04.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.books
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_05.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Book Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_05.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.graphic-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_06.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Graphic Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_06.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.books
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_07.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Book Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_07.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.graphic-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_08.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Graphic Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_08.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.web-design
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_01.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Web Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_01.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+    //-             // he bg
+    //-           // he view
+    //-         // he wrap
+    //-       // end col-12
+    //-       .portfolio-item.books
+    //-         .he-wrap.tpl6
+    //-           img(src='/images/portfolio/portfolio_10.jpg', alt='')
+    //-           .he-view
+    //-             .bg.a0(data-animate='fadeIn')
+    //-               h3.a1(data-animate='fadeInDown') A Book Design Item
+    //-               a.dmbutton.a2(data-rel='prettyPhoto', href='/images/portfolio/portfolio_10.jpg', data-animate='fadeInUp')
+    //-                 i.fa.fa-search
+    //-               a.dmbutton.a2(href='single-project.html', data-animate='fadeInUp')
+    //-                 i.fa.fa-link
+              
     //
       *****************************************************************************************************************
       FOOTER
@@ -404,7 +267,7 @@ html(lang='en')
       Bootstrap core JavaScript
       ==================================================
     // Placed at the end of the document so the pages load faster
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/js/lib/jquery/jquery.min.js')
     script(src='/js/lib/bootstrap/bootstrap.min.js')
     script(src='/js/lib/bootstrap/retina-1.1.0.js')
     script(src='/js/lib/bootstrap/jquery.hoverdir.js')
@@ -412,10 +275,22 @@ html(lang='en')
     script(src='/js/lib/bootstrap/jquery.prettyPhoto.js')
     script(src='/js/lib/bootstrap/jquery.isotope.min.js')
     script(src='/js/lib/bootstrap/custom.js')
+    script(src="/js/lib/fancybox/jquery.fancybox.pack.js")
+    
     script.
       // Portfolio
       (function($) {
       "use strict";
+      
+      $('.gallery-image').fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
+        closeBtn: false,
+        helpers: {
+          titl: {},
+          buttons: {}
+        }
+      });  
       var $container = $('.portfolio'),
       $items = $container.find('.portfolio-item'),
       portfolioLayout = 'fitRows';
