@@ -1,4 +1,5 @@
 const keystone = require('keystone');
+var sitemap = require('keystone-express-sitemap');
 const middleware = require('./middleware');
 const importRoutes = keystone.importer(__dirname);
 
@@ -54,6 +55,11 @@ exports = module.exports = function (app) {
 	app.get('/admission1/:admission', routes.views.admission1);
 	app.get('/admissions/', routes.views.admissions);
 	app.get('/admissions1/', routes.views.admissions1);
+	app.get('/sitemap.xml', function(req, res) {
+		sitemap.create(keystone, req, res, {
+			ignore: ['/secret/:id']
+		});
+	});
 
 	// Downloads
 	app.get('/download/users', routes.download.users);
