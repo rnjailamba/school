@@ -56,9 +56,12 @@ exports = module.exports = function (app) {
 	app.get('/admissions/', routes.views.admissions);
 	app.get('/admissions1/', routes.views.admissions1);
 	app.get('/sitemap.xml', function(req, res) {
-		sitemap.create(keystone, req, res, {
-			ignore: ['/secret/:id']
-		});
+		// sitemap.create(keystone, req, res, {
+		// 	ignore: ['/secret/:id']
+		// });
+		var xml = '<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"> <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com --> <url> <loc>http://www.tpsnarainavihar.com/</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/about</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/contact1</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/academic</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/notifications1</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/admissions1</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/principalsDesk</loc> </url> <url> <loc>http://www.tpsnarainavihar.com/infrastructure</loc> </url> </urlset>';
+		res.set('Content-Type', 'application/rss+xml');
+		res.send(xml);
 	});
 
 	// Downloads
