@@ -370,12 +370,17 @@ a:focus {
 ################################################################# */
 /* General Tweaks */
 
-#blue {
+/*#blue {
 	background: #ecf0f1;
 	margin-top: 60px;
 	margin-bottom: 60px;
 	padding-top: 25px;
 	padding-bottom: 25px;
+}*/
+
+#blue {
+    background: #2ecc71;
+    padding-bottom: 10px;
 }
 
 #blue h3 {
@@ -386,7 +391,7 @@ a:focus {
 
 #gray {
 	background: #ecf0f1;
-	margin-top: 60px;
+	margin-top: 0px;
 	margin-bottom: 60px;
 	padding-top: 25px;
 	padding-bottom: 25px;
@@ -621,6 +626,32 @@ ul.nav.navbar-nav.navbar-right{
 }
 body#homeBody {
     background: #27ae60;
+}
+/*body#linearBg1 {
+  /* fallback */
+  background-color: #27ae60;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#2ecc71), to(#2F2727));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #2F2727, #2ecc71);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #2F2727, #2ecc71);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #2F2727, #2ecc71);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #2F2727, #2ecc71);
+}*/
+
+.containerLessMargin{
+	margin-top: 0px;
+	padding-top: 0px;
 }
 
 @media only screen and (max-width: 950px) {

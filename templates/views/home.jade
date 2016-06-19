@@ -91,8 +91,8 @@ html(lang='en')
             img(src='/images/sliderPics/2.jpg')    
           div(data-thumb='')
             img(src='/images/sliderPics/3.jpg')    
-    .container
-      .row#gray
+    .container.containerLessMargin
+      .row#gray.containerLessMargin
         .col-lg-4
           img.img-responsive(style='', src='/images/team/principal.jpg', alt='')
         .col-lg-8
@@ -111,7 +111,7 @@ html(lang='en')
 
     .container
       .row
-        .col-lg-5.col-lg-offset-1#gray
+        .col-lg-6#gray
           h4 About Tagore Public School
           p
             | The foundation of Tagore Public School was laid in 1981. Since then the school has made tremendous progress. Today it stands complete in itself. It has been recognized by the Directorate of Education,Delhi Administration. The school is affiliated to Central Board of Secondary Education.
@@ -120,7 +120,7 @@ html(lang='en')
           p
             br
             a.btn.btn-theme(href='/about') Read More 
-        .col-lg-4.col-lg-offset-1
+        .col-lg-5.col-lg-offset-1
           h4 Recent notifications.
           #nt-example1-container
             i#nt-example1-prev.fa.fa-arrow-up
