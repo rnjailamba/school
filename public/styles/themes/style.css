@@ -86,7 +86,7 @@ a:focus {
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
 .navbar {
-	min-height: 70px;
+	min-height: 120px;
 	padding-top: 10px;
 	margin-bottom: 0px;
 }
@@ -95,10 +95,15 @@ a:focus {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
 }
-
+.navbar-header  {
+	margin-top: 10px;
+}
 .navbar-header .navbar-brand {
+	margin-top: 10px;
+
 	color: white;
 }
+
 
 .navbar-default .navbar-nav > li > a {
 	color: white;
@@ -497,6 +502,96 @@ csmall2 {
 #theLogo{
 	margin-bottom: 1px;
 }
+
+#theLogo img{
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+.example5 .navbar-brand {
+
+    text-align: center;
+}
+
+
+#brandText::first-line {
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+#brandText span{
+	display: block;
+}
+
+
+/* EXAMPLE 5 - Logo with Text*/
+.example5 .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.example5 .navbar-brand>img {
+  padding: 7px 14px;
+}
+
+.example5 .navbar-brand>img {
+	width: 115px;
+	height: 110px;
+}
+
+ul.nav.navbar-nav.navbar-right{
+	margin-top: 20px;
+	margin-bottom: : auto;
+}
+
+@media only screen and (max-width: 850px) {
+	#brandText::first-line {
+		font-size: 14px;
+		font-weight: bold;
+		color: white;
+	}
+	#brandText span{
+		display: block;
+		font-size: 10px;
+	}
+	.example5 .navbar-brand>img {
+		width: 85px;
+	  height: 80px;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 350px) {
+	#brandText{
+		width: 100px;
+	}
+	#brandText::first-line {
+		font-size: 10px;
+		font-weight: bold;
+		display: block;
+	}
+
+	#brandText .span2{
+	}
+	#brandText .span3{
+		display: none;
+	}
+	.example5 .navbar-brand>img {
+		display: none;
+
+	}
+
+
+}
+
 
 #blue {
 	margin-top: 0px;
