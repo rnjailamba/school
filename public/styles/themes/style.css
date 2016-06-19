@@ -419,6 +419,11 @@ csmall2 {
 	margin-bottom: 40px;
 }
 
+.spacingLess {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .spacingMore {
 	margin-top: 80px;
 	margin-bottom: 80px;
@@ -545,7 +550,7 @@ csmall2 {
 	height: 110px;
 }
 .navbar-collapse {
-     border-top: 0px solid transparent; 
+     border-top: 0px solid transparent;
      box-shadow: inset 0 0px 0 rgba(255,255,255,0.1);
 }
 ul.nav.navbar-nav.navbar-right{
@@ -558,6 +563,13 @@ ul.nav.navbar-nav.navbar-right{
 
 	.navbar-default .navbar-nav > li > a{
 		font-size: 10px;
+	}
+
+	.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	    display: block;
+	    max-width: 60%;
+	    height: auto;
+	    margin: auto;
 	}
 
 }
@@ -623,10 +635,7 @@ ul.nav.navbar-nav.navbar-right{
 		display: none;
 
 	}
-
-
 }
-
 
 #blue {
 	margin-top: 0px;
