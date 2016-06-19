@@ -25,30 +25,48 @@ html(lang='en')
   body
     // Fixed navbar
     // Fixed navbar
-    .navbar.navbar-default#mainNav(role='navigation')
-      .container
-        .navbar-header
-          a.navbar-brand#theLogo(href='/') 
-            img(src='/images/logo/logo.png', alt='' , width='400', height='150')        
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        .navbar-collapse.collapse.navbar-right#listNav
-          ul.nav.navbar-nav
-            li.active
-              a(href='/') HOME
-            li
-              a(href='/about') ABOUT
-            li
-              a(href='/contact1') CONTACT
-            li
-              a(href='/academic') ACADEMIC
-            li
-              a(href='/notifications1') NOTIFICATIONS
-            li
-              a(href='/admissions1') ADMISSIONS
+    .example5
+        nav.navbar.navbar-default
+            .container-fluid
+              .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar5')
+                  span.sr-only Toggle navigation
+                  |           
+                  span.icon-bar
+                  |           
+                  span.icon-bar
+                  |           
+                  span.icon-bar
+                |         
+                a.navbar-brand(href='/')
+                  img(src='/images/logo/logo1.jpg', alt='Dispute Bills')
+                  p#brandText
+                    span
+                      | Tagore Public School
+                    span.span2
+                      | Recognized and Affiliated to CBSE
+                    span.span3
+                      | D Block, Naraina Vihar , New Delhi - 110028     
+          
+
+              #navbar5.navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-right
+                  li
+                    a(href='/') HOME
+                  li
+                    a(href='/about') ABOUT
+                  li
+                    a(href='/preSchool') PRESCHOOL
+                  li
+                    a(href='/academic') ACADEMIC
+                  li.active
+                    a(href='/gallery1') GALLERY                  
+                  li
+                    a(href='/infrastructure') INFRASTRUCTURE                    
+                  li
+                    a(href='/notifications1') NOTIFICATIONS                    
+                  li
+                    a(href='/contact1') CONTACT  
 
         // /.nav-collapse
     //
@@ -234,35 +252,30 @@ html(lang='en')
     #footerwrap
       .container
         .row
+          .col-lg-8
+            div(style='width:600px;max-width:100%;overflow:hidden;height:200px;color:red;')
+              #my-map-display(style='height:100%; width:100%;max-width:100%;')
+                iframe(style='height:100%;width:100%;border:0;', frameborder='0', src='https://www.google.com/maps/embed/v1/place?q=Tagore+Public+School,+Naraina,+New+Delhi,+Delhi,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU')
+              style.
+                #my-map-display img{max-width:none!important;background:none!important;}            
           .col-lg-4
-            h4 About
+            h4 Address And Contact Details
             .hline-w
             p
-              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-          .col-lg-4
-            h4 Social Links
-            .hline-w
-            p
-              a(href='#')
-                i.fa.fa-dribbble
-              a(href='#')
-                i.fa.fa-facebook
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
-              a(href='#')
-                i.fa.fa-tumblr
-          .col-lg-4
-            h4 Our Bunker
-            .hline-w
-            p
-              | Some Ave, 987,
+              | Tagore Public School , Naraina Vihar
+              br            
+              | D Block
               br
-              | 		 				23890, New York,
+              | Naraina Vihar
               br
-              | 		 				United States.
+              | New Delhi - 110028
               br
+              | Email : 
+              a(href='mailto:ashvinbhatia@tpsnarainavihar.com') ashvinbhatia@tpsnarainavihar.com
+              br
+              |                       Phone : 
+              a(href='tel:25892157') 25892157 ,
+              a(href='tel:25894234') 25894234  
     //
       Bootstrap core JavaScript
       ==================================================
