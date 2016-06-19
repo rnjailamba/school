@@ -383,7 +383,17 @@ a:focus {
     padding-bottom: 10px;
 }
 
+#blueTing {
+    background: #3498db;
+    padding-bottom: 10px;
+}
+
 #blue h3 {
+	/*color: white;*/
+	margin-left: 15px;
+}
+
+#blueTing h3 {
 	/*color: white;*/
 	margin-left: 15px;
 }
@@ -626,6 +636,10 @@ ul.nav.navbar-nav.navbar-right{
 }
 body#homeBody {
     background: #27ae60;
+}
+
+body#bodyTing {
+    background: #FFEB3B;
 }
 /*body#linearBg1 {
   /* fallback */
