@@ -44,6 +44,7 @@ exports = module.exports = function (app) {
 	app.get('/about/', routes.views.about);
 	app.get('/principalsDesk/', routes.views.principalsDesk);
 	app.get('/infrastructure/', routes.views.infrastructure);
+	app.get('/preSchool/', routes.views.preSchool);
 	app.get('/academic/', routes.views.academic);
 	app.get('/blog1/', routes.views.blog1);
 	app.all('/contact1/', routes.views.contact1);
