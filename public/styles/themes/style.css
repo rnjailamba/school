@@ -506,10 +506,10 @@ csmall2 {
 #theLogo img{
 }
 
-.navbar-brand {
+.example5 .navbar-brand {
   padding: 0px;
 }
-.navbar-brand>img {
+.example5 .navbar-brand>img {
   height: 100%;
   padding: 15px;
   width: auto;
@@ -550,7 +550,7 @@ ul.nav.navbar-nav.navbar-right{
 	margin-bottom: : auto;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
 	#brandText::first-line {
 		font-size: 14px;
 		font-weight: bold;
@@ -565,6 +565,18 @@ ul.nav.navbar-nav.navbar-right{
 	  height: 80px;
 	}
 
+
+}
+
+@media only screen and (max-width: 850px) {
+.navbar-default .navbar-nav > li > a{
+	font-size: 10px;
+}
+
+@media only screen and (max-width: 780px) {
+.navbar-default .navbar-nav > li > a{
+	font-size: 8px;
+}
 
 }
 
