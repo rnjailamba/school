@@ -550,6 +550,27 @@ ul.nav.navbar-nav.navbar-right{
 	margin-bottom: : auto;
 }
 
+
+@media only screen and (max-width: 1200px) {
+
+	.navbar-default .navbar-nav > li > a{
+		font-size: 10px;
+	}
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+	.nav>li>a{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-size: 9px;
+	}
+}
+
+
 @media only screen and (max-width: 950px) {
 	#brandText::first-line {
 		font-size: 14px;
@@ -565,21 +586,20 @@ ul.nav.navbar-nav.navbar-right{
 	  height: 80px;
 	}
 
-
-}
-
-@media only screen and (max-width: 850px) {
-	.navbar-default .navbar-nav > li > a{
-		font-size: 10px;
+	.nav>li>a{
+		padding-left: 7px;
+		padding-right: 7px;
 	}
 }
-@media only screen and (max-width: 780px) {
-	.navbar-default .navbar-nav > li > a{
-		font-size: 8px;
+
+
+@media only screen and (max-width: 950px) {
+
+	.nav>li>a{
+		padding-left: 5px;
+		padding-right: 5px;
 	}
-
 }
-
 
 @media only screen and (max-width: 350px) {
 	#brandText{
