@@ -528,7 +528,7 @@ csmall2 {
 #brandText::first-line {
 	font-size: 24px;
 	font-weight: bold;
-	color: white;
+	color: #384452;
 }
 #brandText span{
 	display: block;
@@ -554,7 +554,22 @@ csmall2 {
 }
 ul.nav.navbar-nav.navbar-right{
 	margin-top: 20px;
-	margin-bottom: : auto;
+}
+
+.navbar-default {
+    background-color: white;
+}
+
+.navbar {
+    border-bottom: 2px solid black;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #384452;
+}
+
+.navbar-default .navbar-nav > li > a{
+	font-size: 14px;
 }
 
 
@@ -589,7 +604,6 @@ ul.nav.navbar-nav.navbar-right{
 	#brandText::first-line {
 		font-size: 14px;
 		font-weight: bold;
-		color: white;
 	}
 	#brandText span{
 		display: block;
@@ -660,8 +674,8 @@ ul.nav.navbar-nav.navbar-right{
 }
 .slick-slide img {
   display: inline-block;
-  height: 300px;
-  width: 800px;
+  height: 400px;
+  width: 1000px;
 }
 
 .slick-prev:before,
@@ -676,3 +690,11 @@ ul.nav.navbar-nav.navbar-right{
 .indent {
 	 margin-left: 20px;
 }
+
+/*.slick-slide {
+   height:200px;
+}
+
+.slick-slide img {
+   height:200px;
+}*/
