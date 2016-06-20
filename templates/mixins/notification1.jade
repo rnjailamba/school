@@ -1,18 +1,23 @@
 mixin notification(notification)
-	article(data-ks-editable=editable(user, { list: 'Notification', id: notification.id })).media
-		.media-left
-			a(href='/notification' + notification.key)
-				
-		.media-body
-			h3.media-heading
-				a(href='#')= notification.name
-			if notification.publishedDate || notification.author
-				p.text-muted.text-small
-					if notification.publishedDate
-						time= notification._.publishedDate.format('MMMM Do, YYYY')
-						|  
-					if notification.author
-						span by #{notification.author.name.full}
-			!= notification.content
-			.hline
-			.spacing 
+  article(data-ks-editable=editable(user, { list: 'Notification', id: notification.id })).media
+    .media-left
+      a(href='/notification' + notification.key)
+        
+    .media-body
+      h3.media-heading
+        a(href='/notification1/' + notification.key)= notification.name
+      
+      if notification.publishedDate || notification.author
+        p.text-muted.text-small
+          if notification.publishedDate
+            time= notification._.publishedDate.format('MMMM Do, YYYY')
+            |  
+          if notification.author
+            span by #{notification.author.name.full}
+          if notification.pdfURL
+            p: a(href= notification.pdfURL) #{notification.pdfName}  
+
+
+      != notification.content
+      .hline
+      .spacing 
