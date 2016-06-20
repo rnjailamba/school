@@ -103,6 +103,8 @@ html(lang='en')
                       time(datetime=notification.publishedDate)=notification._.publishedDate.format('MMMM Do, YYYY')
                     if notification.author
                       | by #{notification.author}
+                    if notification.pdfURL
+                      p: a(href= notification.pdfURL) #{notification.pdfName}                     
                 hr     
             p: a(href='/notifications1').text-muted view all notifications &rarr;
                 
