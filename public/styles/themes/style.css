@@ -540,11 +540,13 @@ csmall2 {
     text-align: center;
 }
 
-#brandText::first-line {
+
+#brandText > span:first-child{
 	font-size: 24px;
 	font-weight: bold;
 	color: #384452;
 }
+
 #brandText span{
 	display: block;
 }
