@@ -15,7 +15,7 @@ mixin notification(notification)
           if notification.author
             span by #{notification.author.name.full}
       if notification.pdfURL
-        p: a(href= notification.pdfURL) #{notification.pdfName}  
+        p: a(href= notification.pdfURL, target='_blank') #{notification.pdfName}  
 
 
       != notification.content
