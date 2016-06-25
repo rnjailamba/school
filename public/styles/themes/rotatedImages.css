@@ -1,0 +1,34 @@
+.img1 {
+	transform: rotate(7deg);
+	border: 0.5em solid #f4f4f4;
+	box-shadow: 0.5em 0.5em 0.5em #ccc;
+}
+
+
+.img2 {
+	transform: rotate(-8deg);
+	border: 0.5em solid #f4f4f4;
+	box-shadow: 0.5em 0.5em 0.5em #ccc;
+}
+
+.img3 {
+	transform: rotate(7deg);
+	border: 0.5em solid #f4f4f4;
+	box-shadow: 0.5em 0.5em 0.5em #ccc;
+}
+
+.img4 {
+	transform: rotate(-8deg);
+	border: 0.5em solid #f4f4f4;
+	box-shadow: 0.5em 0.5em 0.5em #ccc;
+}
+
+.img5 {
+	transform: rotate(7deg);
+	border: 0.5em solid #f4f4f4;
+	box-shadow: 0.5em 0.5em 0.5em #ccc;
+}
+
+.rotatedImages{
+	max-width: 33%;
+}
