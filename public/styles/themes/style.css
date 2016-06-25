@@ -384,8 +384,10 @@ a:focus {
 }
 
 #blueTing {
-    background: #3498db;
-    padding-bottom: 10px;
+    /*background: #3498db;*/
+		background: #FFEB3B;
+		padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 #blue h3 {
