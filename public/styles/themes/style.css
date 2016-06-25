@@ -641,29 +641,24 @@ body#homeBody {
 }
 
 body#bodyTing {
-    background: #FFEB3B;
+    /*background: #FFEB3B;*/
+		/*margin: 0 auto;
+    padding: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+		background: -webkit-linear-gradient(-55deg, #ffeeb0 30%, #a2d49f 30%, #a2d49f 40%, #c7c12f 40%, #c7c12f 50%, #f26247 50%, #f26247 60%, #ec2045 60%, #ec2045 70%, #ffeeb0 70% );
+		background: -moz-linear-gradient(-55deg, #ffeeb0 30%, #a2d49f 30%, #a2d49f 40%, #c7c12f 40%, #c7c12f 50%, #f26247 50%, #f26247 60%, #ec2045 60%, #ec2045 70%, #ffeeb0 70% );
+		background: linear-gradient(-55deg, #ffeeb0 30%, #a2d49f 30%, #a2d49f 40%, #c7c12f 40%, #c7c12f 50%, #f26247 50%, #f26247 60%, #ec2045 60%, #ec2045 70%, #ffeeb0 70% );*/
+		background: #83a4d4; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #83a4d4 , #b6fbff); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #83a4d4 , #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		   
 }
-/*body#linearBg1 {
-  /* fallback */
-  background-color: #27ae60;
-  background-image: url(images/linear_bg_1.png);
-  background-repeat: repeat-y;
 
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, left top, right top, from(#2ecc71), to(#2F2727));
-
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(left, #2F2727, #2ecc71);
-
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(left, #2F2727, #2ecc71);
-
-  /* IE 10 */
-  background: -ms-linear-gradient(left, #2F2727, #2ecc71);
-
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(left, #2F2727, #2ecc71);
-}*/
 
 .containerLessMargin{
 	margin-top: 0px;
