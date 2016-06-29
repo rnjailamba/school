@@ -615,7 +615,7 @@ ul.nav.navbar-nav.navbar-right{
 
 
 @media only screen and (max-width: 950px) {
-	#brandText::first-line {
+	#brandText > span:first-child {
 		font-size: 14px;
 		font-weight: bold;
 	}
@@ -625,7 +625,7 @@ ul.nav.navbar-nav.navbar-right{
 	}
 	.example5 .navbar-brand>img {
 		width: 85px;
-	  height: 80px;
+	  	height: 80px;
 	}
 
 	.nav>li>a{
@@ -685,7 +685,7 @@ ul.nav.navbar-nav.navbar-right{
 	#brandText{
 		width: 100px;
 	}
-	#brandText::first-line {
+	#brandText > span:first-child {
 		font-size: 10px;
 		font-weight: bold;
 		display: block;
