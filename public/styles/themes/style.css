@@ -98,6 +98,9 @@ a:focus {
 .navbar-header  {
 	margin-top: 10px;
 }
+#navbarHead{
+	width: 370px;
+}
 .navbar-header .navbar-brand {
 	margin-top: 10px;
 
