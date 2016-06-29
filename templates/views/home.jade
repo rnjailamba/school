@@ -37,16 +37,7 @@ html(lang='en')
     .example5
         nav.navbar.navbar-default
             .container-fluid
-              .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar5')
-                  span.sr-only Toggle navigation
-                  |           
-                  span.icon-bar
-                  |           
-                  span.icon-bar
-                  |           
-                  span.icon-bar
-                |         
+              .navbar-header     
                 a.navbar-brand(href='/')
                   img(src='/images/logo/logo1.jpg', alt='Dispute Bills')
                   p#brandText
@@ -56,7 +47,15 @@ html(lang='en')
                       | Recognized and Affiliated to CBSE
                     span.span3
                       | D Block, Naraina Vihar , New Delhi - 110028     
-          
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar5')
+                  span.sr-only Toggle navigation
+                  |           
+                  span.icon-bar
+                  |           
+                  span.icon-bar
+                  |           
+                  span.icon-bar
+                |    
 
               #navbar5.navbar-collapse.collapse
                 ul.nav.navbar-nav.navbar-right
