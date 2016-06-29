@@ -536,7 +536,15 @@ csmall2 {
 
     text-align: center;
 }
+#brandText{
 
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+
+}
 
 #brandText > span:first-child{
 	font-size: 24px;
