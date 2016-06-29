@@ -10,6 +10,8 @@
 ################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(https://fonts.googleapis.com/css?family=Aref+Ruqaa:900);
+
 
 /*	################################################################d
 	1. GENERAL STRUCTURES
@@ -550,6 +552,7 @@ csmall2 {
 }
 
 #brandText > span:first-child{
+	font-family: 'Aref Ruqaa', serif;
 	font-size: 24px;
 	font-weight: bold;
 	color: #384452;
@@ -670,9 +673,16 @@ ul.nav.navbar-nav.navbar-right{
 
 
 
-		background: #D31027;
+		/*background: #D31027;
 		background: -webkit-linear-gradient(to left, #D31027 , #EA384D);
-		background: linear-gradient(to left, #D31027 , #EA384D);
+		background: linear-gradient(to left, #D31027 , #EA384D);*/
+
+
+
+		background: #EB3349; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #EB3349 , #F45C43); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #EB3349 , #F45C43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
 
@@ -770,12 +780,10 @@ body#homeBody {
 		background: -webkit-linear-gradient(to left, #83a4d4 , #b6fbff); /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to left, #83a4d4 , #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
 		background: #1D976C; /* fallback for old browsers */
 		background: -webkit-linear-gradient(to left, #1D976C , #93F9B9); /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to left, #1D976C , #93F9B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		        
+
 }
 
 #blueTing {
