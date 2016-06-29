@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
+	font-weight: 900;
 }
 
 p {
@@ -386,6 +386,10 @@ a:focus {
 #blue {
     background: #2ecc71;
     padding-bottom: 10px;
+		background: #1D976C; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #1D976C , #93F9B9); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #1D976C , #93F9B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
