@@ -745,28 +745,47 @@ ul.nav.navbar-nav.navbar-right{
 .slick-slide {
   background: #ecf0f1;
   color: white;
-  padding: 20px 0;
+  /*padding: 20px 0;*/
   font-size: 30px;
   font-family: "Arial", "Helvetica";
   text-align: center;
 }
 .slick-slide img {
   display: inline-block;
-  height: 400px;
-  width: 1000px;
+  height: 480px;
+  width: 1170px;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: black;
+  color: white;
 }
 
+
 .slick-dots {
-  bottom: -40px;
+    bottom: 10px;
+		color: white;
 }
 
 .indent {
 	 margin-left: 20px;
+}
+
+.slick-prev {
+    left: 10px;
+    z-index: 1000;
+}
+.slick-next {
+    right: 10px;
+    z-index: 1000;
+}
+
+.slider {
+    width: auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
 }
 
 /*.slick-slide {
