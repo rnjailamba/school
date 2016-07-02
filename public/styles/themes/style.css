@@ -752,7 +752,7 @@ ul.nav.navbar-nav.navbar-right{
 }
 .slick-slide img {
   display: inline-block;
-  height: 480px;
+  height: 440px;
   width: 1170px;
 }
 
@@ -760,6 +760,8 @@ ul.nav.navbar-nav.navbar-right{
 .slick-next:before {
   color: white;
 }
+
+
 
 
 .slick-dots {
@@ -788,6 +790,18 @@ ul.nav.navbar-nav.navbar-right{
 		margin-right: 0px;
 }
 
+
+.slick-dots li button:before{
+	color: white;
+}
+
+.slick-dots li button{
+	color: white;
+}
+
+.slick-dots li.slick-active button:before{
+	color: green;
+}
 /*.slick-slide {
    height:200px;
 }
