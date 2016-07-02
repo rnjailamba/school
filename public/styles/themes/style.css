@@ -778,7 +778,7 @@ ul.nav.navbar-nav.navbar-right{
     z-index: 1000;
 }
 .slick-next {
-    right: 10px;
+    right: 30px;
     z-index: 1000;
 }
 
@@ -801,6 +801,14 @@ ul.nav.navbar-nav.navbar-right{
 
 .slick-dots li.slick-active button:before{
 	color: green;
+}
+
+.slick-prev:before, .slick-next:before{
+	font-size: 40px;
+}
+
+.slick-dots li button:before{
+	font-size: 25px
 }
 /*.slick-slide {
    height:200px;
