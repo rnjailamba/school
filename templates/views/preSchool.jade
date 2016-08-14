@@ -17,9 +17,10 @@ html(lang='en')
     link(href='/styles/themes/slick-carousel/slick/slick.css', rel='stylesheet')
     link(href='/styles/themes/slick-carousel/slick/slick-theme.css', rel='stylesheet')
     link(href='/styles/themes/style.css', rel='stylesheet')
+    link(href='/styles/themes/colorbox.css', rel='stylesheet')
     link(href='/styles/themes/rotatedImages.css', rel='stylesheet')
     script(src='/js/lib/jquery/jquery.min.js')
-    script(type='text/javascript', src='/styles/themes/slick-carousel/slick/slick.js')      
+    script(src='/js/lib/bootstrap/jquery.colorbox.js')
 
     // Just for debugging purposes. Don't actually copy this line!
     //if lt IE 9
@@ -232,19 +233,19 @@ html(lang='en')
     .container.mtb
       .row
         .col-lg-12
-          img.img1.rotatedImages(src='/images/preschool/1.jpg')
-          img.img4.rotatedImages(src='/images/preschool/4.jpg')          
-          img.img3.rotatedImages(src='/images/preschool/3.jpg')
-          img.img1.rotatedImages(src='/images/preschool/5.jpg')
-          img.img2.rotatedImages(src='/images/preschool/9.jpg')
-          img.img2.rotatedImages(src='/images/preschool/6.jpg')
+          img.img1.rotatedImages(src='/images/preschool/1.jpg',rel='gal')
+          img.img4.rotatedImages(src='/images/preschool/4.jpg',rel='gal')
+          img.img3.rotatedImages(src='/images/preschool/3.jpg',rel='gal')
+          img.img1.rotatedImages(src='/images/preschool/5.jpg',rel='gal')
+          img.img2.rotatedImages(src='/images/preschool/9.jpg',rel='gal')
+          img.img2.rotatedImages(src='/images/preschool/6.jpg',rel='gal')
           .spacingLess
-          img.img3.rotatedImages(src='/images/preschool/7.jpg')
-          img.img4.rotatedImages(src='/images/preschool/8.jpg')           
-          img.img4.rotatedImages(src='/images/preschool/2.jpg')
-          img.img3.rotatedImages(src='/images/preschool/44.jpg')
-          img.img2.rotatedImages(src='/images/preschool/11.jpg')
-          img.img1.rotatedImages(src='/images/preschool/22.jpg')                    
+          img.img3.rotatedImages(src='/images/preschool/7.jpg',rel='gal')
+          img.img4.rotatedImages(src='/images/preschool/8.jpg',rel='gal') 
+          img.img4.rotatedImages(src='/images/preschool/2.jpg',rel='gal')
+          img.img3.rotatedImages(src='/images/preschool/44.jpg',rel='gal')
+          img.img2.rotatedImages(src='/images/preschool/11.jpg',rel='gal')
+          img.img1.rotatedImages(src='/images/preschool/22.jpg',rel='gal')          
           //- div 
           //-   img.img1(src='/images/portfolio/portfolio_08.jpg')
           //- div 
@@ -410,24 +411,15 @@ html(lang='en')
 
       })(jQuery); 
       
+
+      
     script.
       // Portfolio
       (function($) {
-      "use strict";
+      "use strict";      
       $(document).ready(function(){
-        $(".slider").slick({
-
-            autoplay: true,
-            dots: true,
-            adaptiveHeight: true,
-
-
-            responsive: [{ 
-                breakpoint: 500,
-                settings: {
-                    dots: false
-                } 
-            }]
+        $('img.rotatedImages').click(function() {
+            $(this).colorbox({href: $(this).attr('src'),maxWidth:800,arrowKey:true,rel:'rotatedImages'});
         });
       });
 
