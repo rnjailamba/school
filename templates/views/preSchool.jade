@@ -233,19 +233,31 @@ html(lang='en')
     .container.mtb
       .row
         .col-lg-12
-          img.img1.rotatedImages(src='/images/preschool/1.jpg',rel='gal')
-          img.img4.rotatedImages(src='/images/preschool/4.jpg',rel='gal')
-          img.img3.rotatedImages(src='/images/preschool/3.jpg',rel='gal')
-          img.img1.rotatedImages(src='/images/preschool/5.jpg',rel='gal')
-          img.img2.rotatedImages(src='/images/preschool/9.jpg',rel='gal')
-          img.img2.rotatedImages(src='/images/preschool/6.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/1.jpg', title='Classroom Photo')
+            img.img1.rotatedImages(src='/images/preschool/1.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/4.jpg', title='Classroom Photo')
+            img.img4.rotatedImages(src='/images/preschool/4.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/3.jpg', title='Classroom Photo')
+            img.img3.rotatedImages(src='/images/preschool/3.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/5.jpg', title='Classroom Photo')
+            img.img1.rotatedImages(src='/images/preschool/5.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/9.jpg', title='Exterior Photo')  
+            img.img2.rotatedImages(src='/images/preschool/9.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/6.jpg', title='Classroom Photo')            
+            img.img2.rotatedImages(src='/images/preschool/6.jpg',rel='gal')
           .spacingLess
-          img.img3.rotatedImages(src='/images/preschool/7.jpg',rel='gal')
-          img.img4.rotatedImages(src='/images/preschool/8.jpg',rel='gal') 
-          img.img4.rotatedImages(src='/images/preschool/2.jpg',rel='gal')
-          img.img3.rotatedImages(src='/images/preschool/44.jpg',rel='gal')
-          img.img2.rotatedImages(src='/images/preschool/11.jpg',rel='gal')
-          img.img1.rotatedImages(src='/images/preschool/22.jpg',rel='gal')          
+          a.groupAjax(href='/images/preschool/7.jpg', title='Classroom Photo')
+            img.img3.rotatedImages(src='/images/preschool/7.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/8.jpg', title='Classroom Photo')  
+            img.img4.rotatedImages(src='/images/preschool/8.jpg',rel='gal') 
+          a.groupAjax(href='/images/preschool/2.jpg', title='Classroom Photo')  
+            img.img4.rotatedImages(src='/images/preschool/2.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/44.jpg', title='Classroom Photo')  
+            img.img3.rotatedImages(src='/images/preschool/44.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/11.jpg', title='Classroom Photo')  
+            img.img2.rotatedImages(src='/images/preschool/11.jpg',rel='gal')
+          a.groupAjax(href='/images/preschool/22.jpg', title='Classroom Photo')
+            img.img1.rotatedImages(src='/images/preschool/22.jpg',rel='gal')          
           //- div 
           //-   img.img1(src='/images/portfolio/portfolio_08.jpg')
           //- div 
@@ -418,9 +430,11 @@ html(lang='en')
       (function($) {
       "use strict";      
       $(document).ready(function(){
-        $('img.rotatedImages').click(function() {
-            $(this).colorbox({href: $(this).attr('src'),maxWidth:800,arrowKey:true,rel:'rotatedImages'});
-        });
+        //- $('img.rotatedImages').click(function() {
+        //-     $(this).colorbox({href: $(this).attr('src'),maxWidth:800,arrowKey:true,rel:'rotatedImages'});
+        //- });
+        $(".groupAjax").colorbox({maxWidth:800,arrowKey:true,rel:'groupAjax'});
+        
       });
 
 
