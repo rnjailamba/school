@@ -30,5 +30,18 @@
 }
 
 .rotatedImages{
-	max-width: 33%;
+	max-width: 32%;
+}
+
+@media only screen and (max-width: 800px) {
+	.rotatedImages{
+		max-width: 49%;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	.rotatedImages{
+		max-width: 99%;
+	}
 }
