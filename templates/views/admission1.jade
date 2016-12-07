@@ -71,8 +71,6 @@ html(lang='en')
             article
               header
                 h1= admission.name
-                if admission.pdf.exists
-                  p: a(href= admission.pdf.url) #{admission.pdfName}
                 div
                   p.text-muted.text-small Posted 
                     if admission.publishedDate
