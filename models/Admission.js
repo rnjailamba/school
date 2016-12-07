@@ -11,7 +11,6 @@ Admission.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
 	pdfName: { type: String, index: true,default: 'Download pdf by clicking here' },
-	pdf: { type: Types.S3File },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
