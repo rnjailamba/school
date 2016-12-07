@@ -752,8 +752,11 @@ ul.nav.navbar-nav.navbar-right{
 }
 .slick-slide img {
   display: inline-block;
-  height: 440px;
-  width: 1170px;
+  /*max-height: 440px;
+  max-width: 1170px;
+	width:auto;
+ height:auto;*/
+ width: 100%;
 }
 
 .slick-prev:before,
