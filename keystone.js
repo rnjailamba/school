@@ -31,12 +31,6 @@ keystone.init({
 
 });
 
-keystone.set('s3 config', {
-	bucket: 'cementifyblogimages',
-	'key': 'AKIAJ2QOR4DTCUFS6NFQ',
-	'secret': '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'
-
-});
 
 keystone.import('models');
 
